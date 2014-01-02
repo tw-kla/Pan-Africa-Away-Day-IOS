@@ -22,6 +22,15 @@
 		362C49731875438000950782 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362C49571875438000950782 /* CoreData.framework */; };
 		362C497B1875438000950782 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 362C49791875438000950782 /* InfoPlist.strings */; };
 		362C497D1875438000950782 /* Pan_Africa_Away_DayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362C497C1875438000950782 /* Pan_Africa_Away_DayTests.m */; };
+		362C49871875538600950782 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362C49861875538600950782 /* main.storyboard */; };
+		362C49881875538600950782 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362C49861875538600950782 /* main.storyboard */; };
+		362C49E3187577C000950782 /* TWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 362C49E2187577C000950782 /* TWRootViewController.m */; };
+		362C49E4187577C000950782 /* TWRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 362C49E2187577C000950782 /* TWRootViewController.m */; };
+		36E94620187580090003D526 /* TWSessionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E9461F187580090003D526 /* TWSessionsViewController.m */; };
+		36E94623187580200003D526 /* TWSpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94622187580200003D526 /* TWSpeakersViewController.m */; };
+		36E94626187580330003D526 /* TWInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94625187580330003D526 /* TWInformationViewController.m */; };
+		36E94629187582F50003D526 /* TWMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94628187582F50003D526 /* TWMenuViewController.m */; };
+		75E4BC201F4D4A038D1776A8 /* libPods-Pan Africa Away Day.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 150F1788DD504C9FBC4E804C /* libPods-Pan Africa Away Day.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		150F1788DD504C9FBC4E804C /* libPods-Pan Africa Away Day.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pan Africa Away Day.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		362C494E1875438000950782 /* Pan Africa Away Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pan Africa Away Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		362C49511875438000950782 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		362C49531875438000950782 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +63,18 @@
 		362C49781875438000950782 /* Pan Africa Away DayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pan Africa Away DayTests-Info.plist"; sourceTree = "<group>"; };
 		362C497A1875438000950782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		362C497C1875438000950782 /* Pan_Africa_Away_DayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pan_Africa_Away_DayTests.m; sourceTree = "<group>"; };
+		362C49861875538600950782 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		362C49E1187577C000950782 /* TWRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRootViewController.h; sourceTree = "<group>"; };
+		362C49E2187577C000950782 /* TWRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRootViewController.m; sourceTree = "<group>"; };
+		36E9461E187580090003D526 /* TWSessionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSessionsViewController.h; sourceTree = "<group>"; };
+		36E9461F187580090003D526 /* TWSessionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSessionsViewController.m; sourceTree = "<group>"; };
+		36E94621187580200003D526 /* TWSpeakersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSpeakersViewController.h; sourceTree = "<group>"; };
+		36E94622187580200003D526 /* TWSpeakersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSpeakersViewController.m; sourceTree = "<group>"; };
+		36E94624187580330003D526 /* TWInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWInformationViewController.h; sourceTree = "<group>"; };
+		36E94625187580330003D526 /* TWInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWInformationViewController.m; sourceTree = "<group>"; };
+		36E94627187582F50003D526 /* TWMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMenuViewController.h; sourceTree = "<group>"; };
+		36E94628187582F50003D526 /* TWMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMenuViewController.m; sourceTree = "<group>"; };
+		A2052D41429441F38B6288E3 /* Pods-Pan Africa Away Day.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pan Africa Away Day.xcconfig"; path = "Pods/Pods-Pan Africa Away Day.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +86,7 @@
 				362C49581875438000950782 /* CoreData.framework in Frameworks */,
 				362C49561875438000950782 /* UIKit.framework in Frameworks */,
 				362C49521875438000950782 /* Foundation.framework in Frameworks */,
+				75E4BC201F4D4A038D1776A8 /* libPods-Pan Africa Away Day.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +111,7 @@
 				362C49761875438000950782 /* Pan Africa Away DayTests */,
 				362C49501875438000950782 /* Frameworks */,
 				362C494F1875438000950782 /* Products */,
+				A2052D41429441F38B6288E3 /* Pods-Pan Africa Away Day.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +132,7 @@
 				362C49551875438000950782 /* UIKit.framework */,
 				362C49571875438000950782 /* CoreData.framework */,
 				362C496F1875438000950782 /* XCTest.framework */,
+				150F1788DD504C9FBC4E804C /* libPods-Pan Africa Away Day.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,8 +140,8 @@
 		362C49591875438000950782 /* Pan Africa Away Day */ = {
 			isa = PBXGroup;
 			children = (
-				362C49621875438000950782 /* TWAppDelegate.h */,
-				362C49631875438000950782 /* TWAppDelegate.m */,
+				362C49CD18756A6600950782 /* classes */,
+				362C49861875538600950782 /* main.storyboard */,
 				362C49681875438000950782 /* Images.xcassets */,
 				362C49651875438000950782 /* Pan_Africa_Away_Day.xcdatamodeld */,
 				362C495A1875438000950782 /* Supporting Files */,
@@ -153,6 +178,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		362C49CD18756A6600950782 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				36E94627187582F50003D526 /* TWMenuViewController.h */,
+				36E94628187582F50003D526 /* TWMenuViewController.m */,
+				362C49621875438000950782 /* TWAppDelegate.h */,
+				362C49631875438000950782 /* TWAppDelegate.m */,
+				362C49E1187577C000950782 /* TWRootViewController.h */,
+				362C49E2187577C000950782 /* TWRootViewController.m */,
+				36E9461E187580090003D526 /* TWSessionsViewController.h */,
+				36E9461F187580090003D526 /* TWSessionsViewController.m */,
+				36E94621187580200003D526 /* TWSpeakersViewController.h */,
+				36E94622187580200003D526 /* TWSpeakersViewController.m */,
+				36E94624187580330003D526 /* TWInformationViewController.h */,
+				36E94625187580330003D526 /* TWInformationViewController.m */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 362C49801875438000950782 /* Build configuration list for PBXNativeTarget "Pan Africa Away Day" */;
 			buildPhases = (
+				8D0575ECE36B47AAAB5DACD2 /* Check Pods Manifest.lock */,
 				362C494A1875437F00950782 /* Sources */,
 				362C494B1875437F00950782 /* Frameworks */,
 				362C494C1875437F00950782 /* Resources */,
+				488E171F081D482E9E55FA0A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				362C495E1875438000950782 /* InfoPlist.strings in Resources */,
+				362C49871875538600950782 /* main.storyboard in Resources */,
 				362C49691875438000950782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,10 +289,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				362C497B1875438000950782 /* InfoPlist.strings in Resources */,
+				362C49881875538600950782 /* main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		488E171F081D482E9E55FA0A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Pan Africa Away Day-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D0575ECE36B47AAAB5DACD2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		362C494A1875437F00950782 /* Sources */ = {
@@ -255,6 +336,11 @@
 				362C49601875438000950782 /* main.m in Sources */,
 				362C49641875438000950782 /* TWAppDelegate.m in Sources */,
 				362C49671875438000950782 /* Pan_Africa_Away_Day.xcdatamodeld in Sources */,
+				362C49E3187577C000950782 /* TWRootViewController.m in Sources */,
+				36E94629187582F50003D526 /* TWMenuViewController.m in Sources */,
+				36E94626187580330003D526 /* TWInformationViewController.m in Sources */,
+				36E94620187580090003D526 /* TWSessionsViewController.m in Sources */,
+				36E94623187580200003D526 /* TWSpeakersViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				362C497D1875438000950782 /* Pan_Africa_Away_DayTests.m in Sources */,
+				362C49E4187577C000950782 /* TWRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +457,7 @@
 		};
 		362C49811875438000950782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2052D41429441F38B6288E3 /* Pods-Pan Africa Away Day.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -381,13 +469,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		362C49821875438000950782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2052D41429441F38B6288E3 /* Pods-Pan Africa Away Day.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -399,7 +488,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -465,6 +554,7 @@
 				362C49821875438000950782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		362C49831875438000950782 /* Build configuration list for PBXNativeTarget "Pan Africa Away DayTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +563,7 @@
 				362C49851875438000950782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
