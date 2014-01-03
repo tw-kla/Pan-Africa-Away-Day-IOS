@@ -3,6 +3,7 @@
 
 target "Pan Africa Away Day" do
 pod 'RESideMenu', '~> 3.4'
+pod 'RestKit', '~> 0.20.0'
 end
 
 target "Pan Africa Away DayTests" do

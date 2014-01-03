@@ -30,6 +30,10 @@
 		36E94623187580200003D526 /* TWSpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94622187580200003D526 /* TWSpeakersViewController.m */; };
 		36E94626187580330003D526 /* TWInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94625187580330003D526 /* TWInformationViewController.m */; };
 		36E94629187582F50003D526 /* TWMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94628187582F50003D526 /* TWMenuViewController.m */; };
+		36F873D41876B3EC006C022A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D31876B3EC006C022A /* MobileCoreServices.framework */; };
+		36F873D61876B3F3006C022A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D51876B3F3006C022A /* SystemConfiguration.framework */; };
+		36F873D81876B40E006C022A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D71876B40E006C022A /* CFNetwork.framework */; };
+		36F873DA1876B420006C022A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D91876B420006C022A /* Security.framework */; };
 		75E4BC201F4D4A038D1776A8 /* libPods-Pan Africa Away Day.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 150F1788DD504C9FBC4E804C /* libPods-Pan Africa Away Day.a */; };
 		C3B5C517673D4B70A4CD6CE5 /* libPods-Pan Africa Away DayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA8AEEC3034A8CA9486ADE /* libPods-Pan Africa Away DayTests.a */; };
 /* End PBXBuildFile section */
@@ -76,6 +80,10 @@
 		36E94625187580330003D526 /* TWInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWInformationViewController.m; sourceTree = "<group>"; };
 		36E94627187582F50003D526 /* TWMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMenuViewController.h; sourceTree = "<group>"; };
 		36E94628187582F50003D526 /* TWMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMenuViewController.m; sourceTree = "<group>"; };
+		36F873D31876B3EC006C022A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		36F873D51876B3F3006C022A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		36F873D71876B40E006C022A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		36F873D91876B420006C022A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		64EA8AEEC3034A8CA9486ADE /* libPods-Pan Africa Away DayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pan Africa Away DayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2052D41429441F38B6288E3 /* Pods-Pan Africa Away Day.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pan Africa Away Day.xcconfig"; path = "Pods/Pods-Pan Africa Away Day.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F873DA1876B420006C022A /* Security.framework in Frameworks */,
+				36F873D81876B40E006C022A /* CFNetwork.framework in Frameworks */,
+				36F873D61876B3F3006C022A /* SystemConfiguration.framework in Frameworks */,
+				36F873D41876B3EC006C022A /* MobileCoreServices.framework in Frameworks */,
 				362C49541875438000950782 /* CoreGraphics.framework in Frameworks */,
 				362C49581875438000950782 /* CoreData.framework in Frameworks */,
 				362C49561875438000950782 /* UIKit.framework in Frameworks */,
@@ -132,6 +144,10 @@
 		362C49501875438000950782 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36F873D91876B420006C022A /* Security.framework */,
+				36F873D71876B40E006C022A /* CFNetwork.framework */,
+				36F873D51876B3F3006C022A /* SystemConfiguration.framework */,
+				36F873D31876B3EC006C022A /* MobileCoreServices.framework */,
 				362C49511875438000950782 /* Foundation.framework */,
 				362C49531875438000950782 /* CoreGraphics.framework */,
 				362C49551875438000950782 /* UIKit.framework */,
