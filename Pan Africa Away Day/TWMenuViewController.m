@@ -35,9 +35,8 @@
 
 @implementation TWMenuViewController
 
-- (void)viewDidLoad
+- (void)setupTableView
 {
-    [super viewDidLoad];
     self.tableView = ({
         UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (self.view.frame.size.height - 54 * 5) / 2.0f, self.view.frame.size.width, 54 * 5) style:UITableViewStylePlain];
         tableView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
@@ -56,14 +55,17 @@
     [self.view addSubview:self.tableView];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self setupTableView];
+}
+
 #pragma mark -
 #pragma mark UITableView Delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)selectController:(UINavigationController *)navigationController indexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UINavigationController *navigationController = (UINavigationController *)self.sideMenuViewController.contentViewController;
-    
     switch (indexPath.row) {
         case 0:
             navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"sessionsController"]];
@@ -81,6 +83,14 @@
         default:
             break;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UINavigationController *navigationController = (UINavigationController *)self.sideMenuViewController.contentViewController;
+    
+    [self selectController:navigationController indexPath:indexPath];
 }
 
 #pragma mark -
