@@ -11,125 +11,165 @@
 #import "TWSession.h"
 #import "Mantle.h"
 #import "TWAppDelegate.h"
+#import "TWSessionStoreService.h"
+#import "MSEventCell.h"
+#import "MSDayColumnHeader.h"
+#import "MSTimeRowHeader.h"
+#import "MSCurrentTimeIndicator.h"
+#import "MSCurrentTimeGridline.h"
+#import "MSGridline.h"
+#import "MSTimeRowHeaderBackground.h"
+#import "MSDayColumnHeaderBackground.h"
+
+
+NSString * const MSEventCellReuseIdentifier = @"MSEventCellReuseIdentifier";
+NSString * const MSDayColumnHeaderReuseIdentifier = @"MSDayColumnHeaderReuseIdentifier";
+NSString * const MSTimeRowHeaderReuseIdentifier = @"MSTimeRowHeaderReuseIdentifier";
 @interface TWSessionsViewController ()
 
 @end
+
 static const int kBatchSize = 40;
+@implementation NSDate(Utils)
 
+-(NSDate *) toLocalTime
+{
+    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = [tz secondsFromGMTForDate: self];
+    return [NSDate dateWithTimeInterval: seconds sinceDate: self];
+}
+
+-(NSDate *) toGlobalTime
+{
+    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSInteger seconds = -[tz secondsFromGMTForDate: self];
+    return [NSDate dateWithTimeInterval: seconds sinceDate: self];
+}
+
+@end
 @implementation TWSessionsViewController
-@synthesize tableView,sessions;
-- (void)setupSessions
-{
-    TWSessionAPIService * sessionsCatalog = [[TWSessionAPIService alloc] init];
-    [sessionsCatalog allSessions:^(NSArray *results, NSError *error) {
-        if (error == nil) {
-            NSDictionary *JSONDictionary = [MTLJSONAdapter JSONDictionaryFromModel:[results objectAtIndex:0]];
-            NSLog(@"%@ results" ,JSONDictionary);
-            NSError *error;
-            for (TWSession* session in results)
-            {
-                NSLog(@"%@",session);
-                
-                if (![self containsSession:session]){
-                    if (![self saveSession:session error:&error]) {
-                        NSLog(@"*** Couldn't add the session. Error: %@", [error localizedFailureReason]);
-                    }
 
-                }else {
-                    NSLog(@"Session exists");
-                }
-                
-            }
-        }
-        else {
-            NSLog(@"[search error] %@", [error localizedDescription]);
-        }
-    }];
+
+- (id)init
+{
+    self.collectionViewCalendarLayout = [[MSCollectionViewCalendarLayout alloc] init];
+    self.collectionViewCalendarLayout.delegate = self;
+    self = [super initWithCollectionViewLayout:self.collectionViewCalendarLayout];
+    return self;
 }
 
-- (void)viewDidLoad
-{
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-	self.title = @"Sessions";
-    [self setupSessions];
-    TWAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    self.title = @"Sessions";
+    TWAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     self.managedObjectContext = appDelegate.managedObjectContext;
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Session" inManagedObjectContext:self.managedObjectContext];
-    [request setEntity:entityDesc];
+
+
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+
+    [self.collectionView registerClass:MSEventCell.class forCellWithReuseIdentifier:MSEventCellReuseIdentifier];
+    [self.collectionView registerClass:MSDayColumnHeader.class forSupplementaryViewOfKind:MSCollectionElementKindDayColumnHeader withReuseIdentifier:MSDayColumnHeaderReuseIdentifier];
+    [self.collectionView registerClass:MSTimeRowHeader.class forSupplementaryViewOfKind:MSCollectionElementKindTimeRowHeader withReuseIdentifier:MSTimeRowHeaderReuseIdentifier];
+
+
+    [self.collectionViewCalendarLayout registerClass:MSCurrentTimeIndicator.class forDecorationViewOfKind:MSCollectionElementKindCurrentTimeIndicator];
+    [self.collectionViewCalendarLayout registerClass:MSCurrentTimeGridline.class forDecorationViewOfKind:MSCollectionElementKindCurrentTimeHorizontalGridline];
+    [self.collectionViewCalendarLayout registerClass:MSGridline.class forDecorationViewOfKind:MSCollectionElementKindVerticalGridline];
+    [self.collectionViewCalendarLayout registerClass:MSGridline.class forDecorationViewOfKind:MSCollectionElementKindHorizontalGridline];
+    [self.collectionViewCalendarLayout registerClass:MSTimeRowHeaderBackground.class forDecorationViewOfKind:MSCollectionElementKindTimeRowHeaderBackground];
+    [self.collectionViewCalendarLayout registerClass:MSDayColumnHeaderBackground.class forDecorationViewOfKind:MSCollectionElementKindDayColumnHeaderBackground];
     
-    NSError *error;
-    self.sessions = [self.managedObjectContext executeFetchRequest:request error:&error];
-    NSLog(@"fetched data = %@",[self.sessions lastObject]); //this shows the data
-    [self.tableView reloadData];
+
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Session"];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"startTime" ascending:YES]];
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"day" cacheName:nil];
+    self.fetchedResultsController.delegate = self;
+    [self.fetchedResultsController performFetch:nil];
 }
 
-- (IBAction)showMenu
+- (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
+    [self.collectionViewCalendarLayout scrollCollectionViewToClosetSectionToCurrentTimeAnimated:NO];
+}
+
+- (IBAction)showMenu {
     [self.sideMenuViewController presentMenuViewController];
 }
 
+#pragma mark - NSFetchedResultsControllerDelegate
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    return [sessions count];
+    [self.collectionViewCalendarLayout invalidateLayoutCache];
+    [self.collectionView reloadData];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)givenTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
-    
-    UITableViewCell *cell = [givenTableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
-    
-    cell.textLabel.text = [(TWSession *)[sessions objectAtIndex:indexPath.row] title] ;
+    return self.fetchedResultsController.sections.count;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [(id <NSFetchedResultsSectionInfo>)self.fetchedResultsController.sections[section] numberOfObjects];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MSEventCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MSEventCellReuseIdentifier forIndexPath:indexPath];
+    cell.event = [self.fetchedResultsController objectAtIndexPath:indexPath];
     return cell;
 }
 
-
-- (BOOL)containsSession:(TWSession *)session {
-    NSFetchRequest *fetchRequest = [[self class] fetchRequestForSessionWithIdentifier:session.id];
-    NSUInteger count = [self.managedObjectContext countForFetchRequest:fetchRequest error:NULL];
-    
-    return (count != NSNotFound && count > 0);
-}
-
-+ (NSFetchRequest *)fetchRequest {
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[TWSession managedObjectEntityName]];
-    [fetchRequest setFetchBatchSize:kBatchSize];
-    
-    return fetchRequest;
-}
-+ (NSFetchRequest *)fetchRequestForSessionWithIdentifier:(NSNumber *)identifier {
-    static dispatch_once_t onceToken;
-    static NSPredicate *predicateTemplate;
-    
-    dispatch_once(&onceToken, ^{
-        predicateTemplate = [NSPredicate predicateWithFormat:@"serverId == $identifier"];
-    });
-    
-    NSPredicate *predicate = [predicateTemplate predicateWithSubstitutionVariables:@{
-                                                                                     @"identifier" : identifier
-                                                                                     }];
-    
-    NSFetchRequest *fetchRequest = [self fetchRequest];
-    [fetchRequest setPredicate:predicate];
-    
-    return fetchRequest;
-}
-- (BOOL)saveSession:(TWSession *)session error:(NSError * __autoreleasing *)error {
-    NSManagedObject *managedSession = [MTLManagedObjectAdapter managedObjectFromModel:session insertingIntoContext:self.managedObjectContext error:error];
-    
-    if (*error == nil) {
-        
-        return [self.managedObjectContext save:error];
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *view;
+    if (kind == MSCollectionElementKindDayColumnHeader) {
+        MSDayColumnHeader *dayColumnHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:MSDayColumnHeaderReuseIdentifier forIndexPath:indexPath];
+        NSDate *day = [self.collectionViewCalendarLayout dateForDayColumnHeaderAtIndexPath:indexPath];
+        NSDate *currentDay = [self currentTimeComponentsForCollectionView:self.collectionView layout:self.collectionViewCalendarLayout];
+        dayColumnHeader.day = day;
+        dayColumnHeader.currentDay = [[day beginningOfDay] isEqualToDate:[currentDay beginningOfDay]];
+        view = dayColumnHeader;
+    } else if (kind == MSCollectionElementKindTimeRowHeader) {
+        MSTimeRowHeader *timeRowHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:MSTimeRowHeaderReuseIdentifier forIndexPath:indexPath];
+        timeRowHeader.time = [self.collectionViewCalendarLayout dateForTimeRowHeaderAtIndexPath:indexPath];
+        view = timeRowHeader;
     }
-    
-    return NO;
+    return view;
 }
+
+#pragma mark - MSCollectionViewCalendarLayout
+
+- (NSDate *)collectionView:(UICollectionView *)collectionView layout:(MSCollectionViewCalendarLayout *)collectionViewCalendarLayout dayForSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController.sections objectAtIndex:section];
+    TWSession *event = [sectionInfo.objects firstObject];
+    return event.day;
+}
+
+- (NSDate *)collectionView:(UICollectionView *)collectionView layout:(MSCollectionViewCalendarLayout *)collectionViewCalendarLayout startTimeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    TWSession *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    return [event.startTime toLocalTime];
+}
+
+- (NSDate *)collectionView:(UICollectionView *)collectionView layout:(MSCollectionViewCalendarLayout *)collectionViewCalendarLayout endTimeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    TWSession *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        return [event.endTime toLocalTime];
+}
+
+- (NSDate *)currentTimeComponentsForCollectionView:(UICollectionView *)collectionView layout:(MSCollectionViewCalendarLayout *)collectionViewCalendarLayout
+{
+    return [NSDate date];
+}
+
+
 
 
 @end

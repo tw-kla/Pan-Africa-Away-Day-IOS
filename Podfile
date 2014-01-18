@@ -5,6 +5,10 @@ target "Pan Africa Away Day" do
 pod 'RESideMenu', '~> 3.4'
 pod 'Mantle', '~> 1.3.1'
 pod 'Overcoat'
+pod 'MSCollectionViewCalendarLayout'
+pod 'Reachability'
+pod 'UIColor-Utilities', '~> 1.0'
+pod 'Masonry', '~> 0.2'
 end
 
 target "Pan Africa Away DayTests" do

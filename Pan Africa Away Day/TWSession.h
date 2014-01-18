@@ -18,4 +18,6 @@
 @property (nonatomic, copy, readonly) TWRoom *room;
 //@property (nonatomic, copy, readonly) NSArray *speakers;
 @property (nonatomic, copy, readonly) NSNumber *id;
+
+- (NSDate *)day;
 @end

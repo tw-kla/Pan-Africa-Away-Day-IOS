@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Room" syncable="YES">
+    <entity name="Room" representedClassName="Room" syncable="YES">
         <attribute name="colour" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Session" syncable="YES">
+    <entity name="Session" representedClassName="Session" syncable="YES">
         <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="serverId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="sessionDescription" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,15 +14,15 @@
         <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" syncable="YES"/>
         <relationship name="speakers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Speaker" syncable="YES"/>
     </entity>
-    <entity name="Speaker" syncable="YES">
+    <entity name="Speaker" representedClassName="Speaker" syncable="YES">
         <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Room" positionX="-83" positionY="-9" width="128" height="75"/>
-        <element name="Speaker" positionX="36" positionY="63" width="128" height="88"/>
-        <element name="Session" positionX="-495" positionY="-36" width="128" height="133"/>
+        <element name="Room" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Session" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Speaker" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

@@ -14,4 +14,12 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
+
+
+#define MAS_SHORTHAND
+// Pods
+
+#import <CupertinoYankee/NSDate+CupertinoYankee.h>
+#import <UIColor-Utilities/UIColor+Expanded.h>
+#import <Masonry/Masonry.h>
 #endif

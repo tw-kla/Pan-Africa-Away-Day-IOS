@@ -67,4 +67,9 @@
         return [dateFormatter dateFromString:string];
     }];
 }
+
+- (NSDate *)day
+{
+    return [self.startTime beginningOfDay];
+}
 @end

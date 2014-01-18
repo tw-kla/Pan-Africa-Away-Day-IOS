@@ -66,13 +66,14 @@
 
 - (void)selectController:(UINavigationController *)navigationController indexPath:(NSIndexPath *)indexPath
 {
+    TWSessionsViewController *calendarViewController = [[TWSessionsViewController alloc] init];
     switch (indexPath.row) {
         case 0:
             navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"homeController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 1:
-            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"sessionsController"]];
+             navigationController.viewControllers = @[calendarViewController];
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 2:

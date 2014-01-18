@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
+#import "MSCollectionViewCalendarLayout.h"
 
-@interface TWSessionsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface TWSessionsViewController : UICollectionViewController <MSCollectionViewDelegateCalendarLayout, NSFetchedResultsControllerDelegate>
 @property (strong, nonatomic) NSArray *sessions;
+
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) MSCollectionViewCalendarLayout *collectionViewCalendarLayout;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @end

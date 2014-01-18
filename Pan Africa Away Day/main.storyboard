@@ -112,26 +112,6 @@
         <scene sceneID="xra-GD-nDx">
             <objects>
                 <viewController restorationIdentifier="sessionsController" storyboardIdentifier="sessionsController" id="WSo-K1-TJk" customClass="TWSessionsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KtI-aI-2w2"/>
-                        <viewControllerLayoutGuide type="bottom" id="guM-vt-Oot"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qbe-tb-y1F">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ACM-6e-jUy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="WSo-K1-TJk" id="ccN-xZ-3o2"/>
-                                    <outlet property="delegate" destination="WSo-K1-TJk" id="s6i-iV-EoR"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
                     <navigationItem key="navigationItem" id="t58-kU-Kk5">
                         <barButtonItem key="leftBarButtonItem" image="Icon Menu" id="TTC-3e-F4M">
                             <connections>
@@ -139,9 +119,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="ACM-6e-jUy" id="DdA-Zr-cYC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFC-D2-J0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
