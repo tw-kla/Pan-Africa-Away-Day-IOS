@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Mantle.h"
 
-@interface TWRoom : MTLModel <MTLJSONSerializing>
+@interface TWRoom : MTLModel <MTLJSONSerializing, MTLManagedObjectSerializing>
 @property (nonatomic, copy, readonly) NSString *colour;
 @property (nonatomic, copy, readonly) NSString *name;
 @end

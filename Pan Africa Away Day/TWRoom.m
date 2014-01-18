@@ -17,4 +17,14 @@
              @"colour": @"colour"
              };
 }
+
++ (NSString *)managedObjectEntityName {
+    return @"Room";
+}
++ (NSDictionary *)managedObjectKeysByPropertyKey {
+    return @{
+           
+             @"id" : @"serverId"
+             };
+}
 @end

@@ -8,6 +8,6 @@
 
 #import "OVCClient.h"
 
-@interface TWSpeakersService : OVCClient
+@interface TWSpeakersAPIService : OVCClient
 - (void)allSpeakers:(void (^)(NSArray *results, NSError *error))block;
 @end

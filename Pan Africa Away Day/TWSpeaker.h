@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Mantle.h"
 
-@interface TWSpeaker : MTLModel <MTLJSONSerializing>
+@interface TWSpeaker : MTLModel <MTLJSONSerializing, MTLManagedObjectSerializing>
 @property (nonatomic, copy, readonly) NSString *name;
 @property (nonatomic, copy, readonly) NSString *bio;
 @property (nonatomic, copy, readonly) NSNumber *id;

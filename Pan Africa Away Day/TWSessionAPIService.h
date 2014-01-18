@@ -8,7 +8,7 @@
 
 #import "OVCClient.h"
 
-@interface TWSessionDataService : OVCClient
+@interface TWSessionAPIService : OVCClient
 - (void)allSessions:(void (^)(NSArray *results, NSError *error))block;
 
 @end

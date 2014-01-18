@@ -7,7 +7,7 @@
 //
 
 #import "TWSpeakersViewController.h"
-#import "TWSpeakersService.h"
+#import "TWSpeakersAPIService.h"
 #import "TWSpeaker.h"
 #import "Mantle.h"
 #import "UIImageView+AFNetworking.h"
@@ -33,7 +33,7 @@
 
 - (void)setupSpeakers
 {
-    TWSpeakersService * service = [[TWSpeakersService alloc] init];
+    TWSpeakersAPIService * service = [[TWSpeakersAPIService alloc] init];
     [service allSpeakers:^(NSArray *results, NSError *error) {
         if (error == nil) {
             NSDictionary *JSONDictionary = [MTLJSONAdapter JSONDictionaryFromModel:[results objectAtIndex:0]];

@@ -19,4 +19,14 @@
              @"id": @"id",
              };
 }
+
++ (NSString *)managedObjectEntityName {
+    return @"Speaker";
+}
++ (NSDictionary *)managedObjectKeysByPropertyKey {
+    return @{
+             
+             @"id" : @"serverId"
+             };
+}
 @end

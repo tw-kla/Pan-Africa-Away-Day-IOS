@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Thoughtworks. All rights reserved.
 //
 
-#import "TWSpeakersService.h"
+#import "TWSpeakersAPIService.h"
 #import "TWSpeaker.h"
 
-@implementation TWSpeakersService
+@implementation TWSpeakersAPIService
 - (id)init {
     return [super initWithBaseURL:[NSURL URLWithString:@"http://pa-kla-away-day.herokuapp.com"]];
 }

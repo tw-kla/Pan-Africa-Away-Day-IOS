@@ -12,5 +12,5 @@
 @interface TWSessionsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *sessions;
-
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @end

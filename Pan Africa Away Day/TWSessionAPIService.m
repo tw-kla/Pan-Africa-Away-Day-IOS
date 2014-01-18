@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Thoughtworks. All rights reserved.
 //
 
-#import "TWSessionDataService.h"
+#import "TWSessionAPIService.h"
 #import "TWSession.h"
-@implementation TWSessionDataService
+@implementation TWSessionAPIService
 - (id)init {
     return [super initWithBaseURL:[NSURL URLWithString:@"http://pa-kla-away-day.herokuapp.com"]];
 }
