@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
 
-@interface TWSessionsViewController : UIViewController
+@interface TWSessionsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *sessions;
 
 @end

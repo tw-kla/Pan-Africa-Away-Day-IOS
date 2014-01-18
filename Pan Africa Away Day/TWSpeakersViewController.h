@@ -10,5 +10,6 @@
 #import "RESideMenu.h"
 
 @interface TWSpeakersViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong,nonatomic) NSArray * speakers;
 @end
