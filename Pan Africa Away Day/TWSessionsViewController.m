@@ -55,7 +55,19 @@ static const int kBatchSize = 40;
     self.collectionViewCalendarLayout = [[MSCollectionViewCalendarLayout alloc] init];
     self.collectionViewCalendarLayout.delegate = self;
     self = [super initWithCollectionViewLayout:self.collectionViewCalendarLayout];
+    self.title = @"Sessions";
+    [self.tabBarItem setImage:[UIImage imageNamed:@"IconSession"]];
+    
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)decoder{
+   return  [self init];
+    
+    
+}
+- (UICollectionViewLayout *)collectionViewLayout {
+    return [[MSCollectionViewCalendarLayout alloc] init];
 }
 
 
@@ -94,9 +106,6 @@ static const int kBatchSize = 40;
     [self.collectionViewCalendarLayout scrollCollectionViewToClosetSectionToCurrentTimeAnimated:NO];
 }
 
-- (IBAction)showMenu {
-    [self.sideMenuViewController presentMenuViewController];
-}
 
 #pragma mark - NSFetchedResultsControllerDelegate
 

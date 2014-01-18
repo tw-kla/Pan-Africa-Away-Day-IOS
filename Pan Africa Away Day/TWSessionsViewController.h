@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RESideMenu.h"
+
 #import "MSCollectionViewCalendarLayout.h"
 
 @interface TWSessionsViewController : UICollectionViewController <MSCollectionViewDelegateCalendarLayout, NSFetchedResultsControllerDelegate>

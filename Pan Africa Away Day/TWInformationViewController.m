@@ -17,11 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.title = @"General Information";
+	self.title = @"Help";
 }
-- (IBAction)showMenu
-{
-    [self.sideMenuViewController presentMenuViewController];
-}
+ 
 
 @end

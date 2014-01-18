@@ -26,10 +26,7 @@
     [self setupSpeakers];
 }
 
-- (IBAction)showMenu
-{
-    [self.sideMenuViewController presentMenuViewController];
-}
+ 
 
 - (void)setupSpeakers
 {

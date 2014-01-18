@@ -19,14 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.title = @"Pan Africa Away Day 2014";
+	self.title = @"Home";
 }
 
 
 
-- (IBAction)showMenu
-{
-    [self.sideMenuViewController presentMenuViewController];
-}
-
+ 
 @end
