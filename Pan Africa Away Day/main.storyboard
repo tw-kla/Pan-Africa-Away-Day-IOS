@@ -34,7 +34,8 @@
                         <segue destination="WSo-K1-TJk" kind="push" identifier="toSessions" id="SUg-RT-jsM"/>
                         <segue destination="4Z9-ZI-5Gf" kind="push" identifier="toSpeakers" id="GDA-CW-smc"/>
                         <segue destination="gMy-3y-c7x" kind="push" identifier="toInformation" id="Y10-Ix-IY8"/>
-                        <segue destination="WSo-K1-TJk" kind="relationship" relationship="rootViewController" id="V07-9G-NDS"/>
+                        <segue destination="Crs-Dl-ecF" kind="relationship" relationship="rootViewController" id="IvR-aZ-YH9"/>
+                        <segue destination="Crs-Dl-ecF" kind="push" id="J7m-dU-vgo"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5LD-nL-jRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,6 +66,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUz-pA-dWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1115" y="-2"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="51Q-vL-VMF">
+            <objects>
+                <viewController restorationIdentifier="homeController" storyboardIdentifier="homeController" id="Crs-Dl-ecF" customClass="TWHomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DD1-xV-36R"/>
+                        <viewControllerLayoutGuide type="bottom" id="nIC-e1-nok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xOV-Wp-iRG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0MI-dU-D9P">
+                        <barButtonItem key="leftBarButtonItem" image="Icon Menu" id="tIT-EM-8hT">
+                            <connections>
+                                <action selector="showMenu" destination="Crs-Dl-ecF" id="Z6g-uq-OQb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQh-i5-f64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115" y="-1524"/>
         </scene>
         <!--Sessions View Controller-->
         <scene sceneID="xra-GD-nDx">
@@ -104,6 +132,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="IEj-QX-GBR"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sa1-fd-CX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,6 +178,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="V07-9G-NDS"/>
+        <segue reference="IvR-aZ-YH9"/>
     </inferredMetricsTieBreakers>
 </document>

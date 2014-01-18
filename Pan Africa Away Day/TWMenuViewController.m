@@ -68,15 +68,19 @@
 {
     switch (indexPath.row) {
         case 0:
-            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"sessionsController"]];
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"homeController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 1:
+            navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"sessionsController"]];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 2:
             navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"speakersController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
             
-        case 2:
+        case 3:
             navigationController.viewControllers = @[[self.storyboard instantiateViewControllerWithIdentifier:@"informationController"]];
             [self.sideMenuViewController hideMenuViewController];
             break;
@@ -108,7 +112,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -126,8 +130,8 @@
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
     
-    NSArray *titles = @[@"Sessions", @"Speakers", @"Information"];
-    NSArray *images = @[@"IconSession", @"IconSpeaker", @"IconInfo"];
+    NSArray *titles = @[@"Home",@"Sessions", @"Speakers", @"Information"];
+    NSArray *images = @[@"IconHome",@"IconSession", @"IconSpeaker", @"IconInfo"];
     cell.textLabel.text = titles[indexPath.row];
     UIImage *cellImage = [UIImage imageNamed:images[indexPath.row]];
 
