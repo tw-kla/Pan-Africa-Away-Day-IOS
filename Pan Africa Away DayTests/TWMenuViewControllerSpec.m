@@ -7,19 +7,15 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "TWMenuViewController.h"
-#import "TWRootViewController.h"
-
 #import "Kiwi.h"
 
 SPEC_BEGIN(MenuViewControllerSpec)
 
 describe(@"MenuViewController", ^{
     it(@"should setup the tableview", ^{
-        TWMenuViewController *controller = [[TWMenuViewController alloc]init];
-       [controller stub:@selector(setupTableView)];
-        [[[controller should] receive] setupTableView];
-        [controller viewDidLoad];
+      
+      
+      
         
     });
     

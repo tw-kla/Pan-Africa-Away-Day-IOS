@@ -1,0 +1,7 @@
+[
+  "-workspace", "Pan Africa Away Day.xcworkspace",
+  "-scheme", "Pan Africa Away Day",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-arch", "i386"
+]

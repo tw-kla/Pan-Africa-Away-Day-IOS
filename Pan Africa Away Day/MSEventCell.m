@@ -136,7 +136,9 @@
 
 - (UIColor *)backgroundColorHighlighted:(BOOL)selected
 {
-    return selected ? [UIColor colorWithHexString:@"35b1f1"] : [[UIColor colorWithHexString:@"35b1f1"] colorWithAlphaComponent:0.2];
+    UIColor *baseColor = [UIColor colorWithHexString:@"35b1f1"];
+
+    return selected ? baseColor : [baseColor colorWithAlphaComponent:0.2];
 }
 
 - (UIColor *)textColorHighlighted:(BOOL)selected
