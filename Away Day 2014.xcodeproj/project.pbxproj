@@ -101,22 +101,22 @@
 		360A61DB188AEA3200951FA7 /* MSCurrentTimeIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCurrentTimeIndicator.h; sourceTree = "<group>"; };
 		360A61DD188AEA4300951FA7 /* MSTimeRowHeaderBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTimeRowHeaderBackground.m; sourceTree = "<group>"; };
 		360A61DE188AEA4300951FA7 /* MSTimeRowHeaderBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTimeRowHeaderBackground.h; sourceTree = "<group>"; };
-		362C494E1875438000950782 /* Pan Africa Away Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pan Africa Away Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		362C494E1875438000950782 /* Away Day 2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Away Day 2014.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		362C49511875438000950782 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		362C49531875438000950782 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		362C49551875438000950782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		362C49571875438000950782 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		362C495B1875438000950782 /* Pan Africa Away Day-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pan Africa Away Day-Info.plist"; sourceTree = "<group>"; };
+		362C495B1875438000950782 /* Away Day 2014-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Away Day 2014-Info.plist"; sourceTree = "<group>"; };
 		362C495D1875438000950782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		362C495F1875438000950782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		362C49611875438000950782 /* Pan Africa Away Day-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pan Africa Away Day-Prefix.pch"; sourceTree = "<group>"; };
+		362C49611875438000950782 /* Away Day 2014-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Away Day 2014-Prefix.pch"; sourceTree = "<group>"; };
 		362C49621875438000950782 /* TWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWAppDelegate.h; sourceTree = "<group>"; };
 		362C49631875438000950782 /* TWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWAppDelegate.m; sourceTree = "<group>"; };
 		362C49661875438000950782 /* Pan_Africa_Away_Day.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pan_Africa_Away_Day.xcdatamodel; sourceTree = "<group>"; };
 		362C49681875438000950782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		362C496E1875438000950782 /* Pan Africa Away DayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pan Africa Away DayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		362C496E1875438000950782 /* Away Day 2014Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Away Day 2014Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		362C496F1875438000950782 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		362C49781875438000950782 /* Pan Africa Away DayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pan Africa Away DayTests-Info.plist"; sourceTree = "<group>"; };
+		362C49781875438000950782 /* Away Day 2014Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Away Day 2014Tests-Info.plist"; sourceTree = "<group>"; };
 		362C497A1875438000950782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		36811FD9189D22AC0062E12B /* TWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWHomeViewController.h; sourceTree = "<group>"; };
 		36811FDA189D22AC0062E12B /* TWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWHomeViewController.m; sourceTree = "<group>"; };
@@ -266,8 +266,8 @@
 		362C494F1875438000950782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				362C494E1875438000950782 /* Pan Africa Away Day.app */,
-				362C496E1875438000950782 /* Pan Africa Away DayTests.xctest */,
+				362C494E1875438000950782 /* Away Day 2014.app */,
+				362C496E1875438000950782 /* Away Day 2014Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,10 +304,10 @@
 		362C495A1875438000950782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				362C495B1875438000950782 /* Pan Africa Away Day-Info.plist */,
+				362C495B1875438000950782 /* Away Day 2014-Info.plist */,
 				362C495C1875438000950782 /* InfoPlist.strings */,
 				362C495F1875438000950782 /* main.m */,
-				362C49611875438000950782 /* Pan Africa Away Day-Prefix.pch */,
+				362C49611875438000950782 /* Away Day 2014-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -324,7 +324,7 @@
 		362C49771875438000950782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				362C49781875438000950782 /* Pan Africa Away DayTests-Info.plist */,
+				362C49781875438000950782 /* Away Day 2014Tests-Info.plist */,
 				362C49791875438000950782 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -354,9 +354,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		362C494D1875437F00950782 /* Pan Africa Away Day */ = {
+		362C494D1875437F00950782 /* Away Day 2014 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 362C49801875438000950782 /* Build configuration list for PBXNativeTarget "Pan Africa Away Day" */;
+			buildConfigurationList = 362C49801875438000950782 /* Build configuration list for PBXNativeTarget "Away Day 2014" */;
 			buildPhases = (
 				8D0575ECE36B47AAAB5DACD2 /* Check Pods Manifest.lock */,
 				362C494A1875437F00950782 /* Sources */,
@@ -368,14 +368,14 @@
 			);
 			dependencies = (
 			);
-			name = "Pan Africa Away Day";
+			name = "Away Day 2014";
 			productName = "Pan Africa Away Day";
-			productReference = 362C494E1875438000950782 /* Pan Africa Away Day.app */;
+			productReference = 362C494E1875438000950782 /* Away Day 2014.app */;
 			productType = "com.apple.product-type.application";
 		};
-		362C496D1875438000950782 /* Pan Africa Away DayTests */ = {
+		362C496D1875438000950782 /* Away Day 2014Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 362C49831875438000950782 /* Build configuration list for PBXNativeTarget "Pan Africa Away DayTests" */;
+			buildConfigurationList = 362C49831875438000950782 /* Build configuration list for PBXNativeTarget "Away Day 2014Tests" */;
 			buildPhases = (
 				D5091CA739A7471A9EBB2D4C /* Check Pods Manifest.lock */,
 				362C496A1875438000950782 /* Sources */,
@@ -388,9 +388,9 @@
 			dependencies = (
 				362C49751875438000950782 /* PBXTargetDependency */,
 			);
-			name = "Pan Africa Away DayTests";
+			name = "Away Day 2014Tests";
 			productName = "Pan Africa Away DayTests";
-			productReference = 362C496E1875438000950782 /* Pan Africa Away DayTests.xctest */;
+			productReference = 362C496E1875438000950782 /* Away Day 2014Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -411,7 +411,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 362C49491875437F00950782 /* Build configuration list for PBXProject "Pan Africa Away Day" */;
+			buildConfigurationList = 362C49491875437F00950782 /* Build configuration list for PBXProject "Away Day 2014" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -423,8 +423,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				362C494D1875437F00950782 /* Pan Africa Away Day */,
-				362C496D1875438000950782 /* Pan Africa Away DayTests */,
+				362C494D1875437F00950782 /* Away Day 2014 */,
+				362C496D1875438000950782 /* Away Day 2014Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -560,7 +560,7 @@
 /* Begin PBXTargetDependency section */
 		362C49751875438000950782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 362C494D1875437F00950782 /* Pan Africa Away Day */;
+			target = 362C494D1875437F00950782 /* Away Day 2014 */;
 			targetProxy = 362C49741875438000950782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -666,10 +666,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pan Africa Away Day/Pan Africa Away Day-Prefix.pch";
-				INFOPLIST_FILE = "Pan Africa Away Day/Pan Africa Away Day-Info.plist";
+				GCC_PREFIX_HEADER = "Pan Africa Away Day/Away Day 2014-Prefix.pch";
+				INFOPLIST_FILE = "Pan Africa Away Day/Away Day 2014-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Away Day 2014";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
@@ -686,10 +686,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pan Africa Away Day/Pan Africa Away Day-Prefix.pch";
-				INFOPLIST_FILE = "Pan Africa Away Day/Pan Africa Away Day-Info.plist";
+				GCC_PREFIX_HEADER = "Pan Africa Away Day/Away Day 2014-Prefix.pch";
+				INFOPLIST_FILE = "Pan Africa Away Day/Away Day 2014-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Away Day 2014";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
@@ -714,8 +714,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Pan Africa Away DayTests/Pan Africa Away DayTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Pan Africa Away DayTests/Away Day 2014Tests-Info.plist";
+				PRODUCT_NAME = "Away Day 2014Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -734,8 +734,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pan Africa Away Day/Pan Africa Away Day-Prefix.pch";
-				INFOPLIST_FILE = "Pan Africa Away DayTests/Pan Africa Away DayTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Pan Africa Away DayTests/Away Day 2014Tests-Info.plist";
+				PRODUCT_NAME = "Away Day 2014Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -744,7 +744,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		362C49491875437F00950782 /* Build configuration list for PBXProject "Pan Africa Away Day" */ = {
+		362C49491875437F00950782 /* Build configuration list for PBXProject "Away Day 2014" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				362C497E1875438000950782 /* Debug */,
@@ -753,7 +753,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		362C49801875438000950782 /* Build configuration list for PBXNativeTarget "Pan Africa Away Day" */ = {
+		362C49801875438000950782 /* Build configuration list for PBXNativeTarget "Away Day 2014" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				362C49811875438000950782 /* Debug */,
@@ -762,7 +762,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		362C49831875438000950782 /* Build configuration list for PBXNativeTarget "Pan Africa Away DayTests" */ = {
+		362C49831875438000950782 /* Build configuration list for PBXNativeTarget "Away Day 2014Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				362C49841875438000950782 /* Debug */,
