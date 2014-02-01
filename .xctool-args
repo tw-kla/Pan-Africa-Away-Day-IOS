@@ -1,5 +1,5 @@
 [
-  "-workspace", "Pan Africa Away Day.xcworkspace",
+  "-workspace", "Away Day 2014.xcworkspace",
   "-scheme", "Away Day 2014",
   "-configuration", "Debug",
   "-sdk", "iphonesimulator",

@@ -50,8 +50,8 @@
 		36F873D61876B3F3006C022A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D51876B3F3006C022A /* SystemConfiguration.framework */; };
 		36F873D81876B40E006C022A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D71876B40E006C022A /* CFNetwork.framework */; };
 		36F873DA1876B420006C022A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D91876B420006C022A /* Security.framework */; };
-		75E4BC201F4D4A038D1776A8 /* libPods-Pan Africa Away Day.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 150F1788DD504C9FBC4E804C /* libPods-Pan Africa Away Day.a */; };
-		C3B5C517673D4B70A4CD6CE5 /* libPods-Pan Africa Away DayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA8AEEC3034A8CA9486ADE /* libPods-Pan Africa Away DayTests.a */; };
+		69AEFA4A500246E0A73E4A25 /* libPods-Away Day 2014Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B5541BEF44409BAABFBC9B /* libPods-Away Day 2014Tests.a */; };
+		D50C08EA80E94E588FF3DF42 /* libPods-Away Day 2014.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC2BBA16834824872367AB /* libPods-Away Day 2014.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,7 +134,11 @@
 		36F873D51876B3F3006C022A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		36F873D71876B40E006C022A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		36F873D91876B420006C022A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		44DE0F2D5D9A433EBF375A6C /* Pods-Away Day 2014.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Away Day 2014.xcconfig"; path = "Pods/Pods-Away Day 2014.xcconfig"; sourceTree = "<group>"; };
+		482D9AB11B1D429490A286B9 /* Pods-Away Day 2014Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Away Day 2014Tests.xcconfig"; path = "Pods/Pods-Away Day 2014Tests.xcconfig"; sourceTree = "<group>"; };
+		53FC2BBA16834824872367AB /* libPods-Away Day 2014.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Away Day 2014.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EA8AEEC3034A8CA9486ADE /* libPods-Pan Africa Away DayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pan Africa Away DayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B5541BEF44409BAABFBC9B /* libPods-Away Day 2014Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Away Day 2014Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2052D41429441F38B6288E3 /* Pods-Pan Africa Away Day.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pan Africa Away Day.xcconfig"; path = "Pods/Pods-Pan Africa Away Day.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +155,7 @@
 				362C49581875438000950782 /* CoreData.framework in Frameworks */,
 				362C49561875438000950782 /* UIKit.framework in Frameworks */,
 				362C49521875438000950782 /* Foundation.framework in Frameworks */,
-				75E4BC201F4D4A038D1776A8 /* libPods-Pan Africa Away Day.a in Frameworks */,
+				D50C08EA80E94E588FF3DF42 /* libPods-Away Day 2014.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +167,7 @@
 				362C49731875438000950782 /* CoreData.framework in Frameworks */,
 				362C49721875438000950782 /* UIKit.framework in Frameworks */,
 				362C49711875438000950782 /* Foundation.framework in Frameworks */,
-				C3B5C517673D4B70A4CD6CE5 /* libPods-Pan Africa Away DayTests.a in Frameworks */,
+				69AEFA4A500246E0A73E4A25 /* libPods-Away Day 2014Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +258,14 @@
 		362C49451875437F00950782 = {
 			isa = PBXGroup;
 			children = (
-				362C49591875438000950782 /* Pan Africa Away Day */,
-				362C49761875438000950782 /* Pan Africa Away DayTests */,
+				362C49591875438000950782 /* Away Day 2014 */,
+				362C49761875438000950782 /* Tests */,
 				362C49501875438000950782 /* Frameworks */,
 				362C494F1875438000950782 /* Products */,
 				A2052D41429441F38B6288E3 /* Pods-Pan Africa Away Day.xcconfig */,
 				1742C2E308974284B044FE92 /* Pods-Pan Africa Away DayTests.xcconfig */,
+				44DE0F2D5D9A433EBF375A6C /* Pods-Away Day 2014.xcconfig */,
+				482D9AB11B1D429490A286B9 /* Pods-Away Day 2014Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,11 +292,13 @@
 				362C496F1875438000950782 /* XCTest.framework */,
 				150F1788DD504C9FBC4E804C /* libPods-Pan Africa Away Day.a */,
 				64EA8AEEC3034A8CA9486ADE /* libPods-Pan Africa Away DayTests.a */,
+				53FC2BBA16834824872367AB /* libPods-Away Day 2014.a */,
+				66B5541BEF44409BAABFBC9B /* libPods-Away Day 2014Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		362C49591875438000950782 /* Pan Africa Away Day */ = {
+		362C49591875438000950782 /* Away Day 2014 */ = {
 			isa = PBXGroup;
 			children = (
 				362C49CD18756A6600950782 /* classes */,
@@ -298,6 +306,7 @@
 				362C49651875438000950782 /* Pan_Africa_Away_Day.xcdatamodeld */,
 				362C495A1875438000950782 /* Supporting Files */,
 			);
+			name = "Away Day 2014";
 			path = "Pan Africa Away Day";
 			sourceTree = "<group>";
 		};
@@ -312,12 +321,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		362C49761875438000950782 /* Pan Africa Away DayTests */ = {
+		362C49761875438000950782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				368176E9187699F300494B5E /* specs */,
 				362C49771875438000950782 /* Supporting Files */,
 			);
+			name = Tests;
 			path = "Pan Africa Away DayTests";
 			sourceTree = "<group>";
 		};
@@ -465,7 +475,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Pan Africa Away Day-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-Away Day 2014-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4C6A8B17ABC84E01AC1A4999 /* Copy Pods Resources */ = {
@@ -480,7 +490,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Pan Africa Away DayTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-Away Day 2014Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8D0575ECE36B47AAAB5DACD2 /* Check Pods Manifest.lock */ = {
@@ -659,7 +669,7 @@
 		};
 		362C49811875438000950782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2052D41429441F38B6288E3 /* Pods-Pan Africa Away Day.xcconfig */;
+			baseConfigurationReference = 44DE0F2D5D9A433EBF375A6C /* Pods-Away Day 2014.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -679,7 +689,7 @@
 		};
 		362C49821875438000950782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2052D41429441F38B6288E3 /* Pods-Pan Africa Away Day.xcconfig */;
+			baseConfigurationReference = 44DE0F2D5D9A433EBF375A6C /* Pods-Away Day 2014.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -699,17 +709,17 @@
 		};
 		362C49841875438000950782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1742C2E308974284B044FE92 /* Pods-Pan Africa Away DayTests.xcconfig */;
+			baseConfigurationReference = 482D9AB11B1D429490A286B9 /* Pods-Away Day 2014Tests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pan Africa Away Day.app/Pan Africa Away Day";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Away Day 2014.app/Away Day 2014";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pan Africa Away Day/Pan Africa Away Day-Prefix.pch";
+				GCC_PREFIX_HEADER = "Pan Africa Away Day/Away Day 2014-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -723,17 +733,17 @@
 		};
 		362C49851875438000950782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1742C2E308974284B044FE92 /* Pods-Pan Africa Away DayTests.xcconfig */;
+			baseConfigurationReference = 482D9AB11B1D429490A286B9 /* Pods-Away Day 2014Tests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Pan Africa Away Day.app/Pan Africa Away Day";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Away Day 2014.app/Away Day 2014";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pan Africa Away Day/Pan Africa Away Day-Prefix.pch";
+				GCC_PREFIX_HEADER = "Pan Africa Away Day/Away Day 2014-Prefix.pch";
 				INFOPLIST_FILE = "Pan Africa Away DayTests/Away Day 2014Tests-Info.plist";
 				PRODUCT_NAME = "Away Day 2014Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
