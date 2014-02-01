@@ -2,7 +2,7 @@
 //  TWHomeViewController.m
 //  Pan Africa Away Day
 //
-//  Created by James Muranga on 1/7/14.
+//  Created by James Muranga on 2/1/14.
 //  Copyright (c) 2014 Thoughtworks. All rights reserved.
 //
 
@@ -14,15 +14,27 @@
 
 @implementation TWHomeViewController
 
-
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+       
+        self.title = @"Home";
+        [self.tabBarItem setImage:[UIImage imageNamed:@"IconHome"]];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.title = @"Home";
+    
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+   
+}
 
-
- 
 @end

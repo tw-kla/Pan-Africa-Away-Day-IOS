@@ -11,7 +11,9 @@
 #import "TWSessionStoreService.h"
 #import "TWSession.h"
 #import "Reachability.h"
-
+#import "TWSessionsViewController.h"
+#import "TWHomeViewController.h"
+#import "TWSpeakersViewController.h"
 
 @interface TWAppDelegate ()
 
@@ -26,32 +28,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    Reachability* reach = [Reachability reachabilityWithHostname:@"www.google.com"];
-
-    NetworkStatus netStatus = [reach currentReachabilityStatus];
-
-    switch (netStatus)
-    {
-        case NotReachable:
-        {
-            NSLog(@"Access Not Available");
-            break;
-        }
-
-        case ReachableViaWWAN:
-        {
-            NSLog(@"Reachable WWAN");
-            [self syncSessions];
-            break;
-        }
-        case ReachableViaWiFi:
-        {
-            NSLog(@"Reachable WiFi");
-            [self syncSessions];
-            break;
-        }
-    }
-
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    
+    TWSessionsViewController * sessionsViewController = [[TWSessionsViewController alloc]initWithNibName:@"TWSessionsView" bundle:nil];
+    
+    TWHomeViewController * homeViewController = [[TWHomeViewController alloc]initWithNibName:@"TWHomeViewController" bundle:nil];
+    
+    TWSpeakersViewController * speakersViewController =  [[TWSpeakersViewController alloc ]initWithNibName:@"TWSpeakersView" bundle:nil];
+    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:homeViewController];
+   
+    UINavigationController *sessionsNav = [[UINavigationController alloc] initWithRootViewController:sessionsViewController];
+    
+    UINavigationController *speakersNav = [[UINavigationController alloc] initWithRootViewController:speakersViewController];
+    
+    self.tabBarController.viewControllers = @[homeNav,sessionsNav,speakersNav];
+    
+    self.window.rootViewController = self.tabBarController;
+    
+    [self.window makeKeyAndVisible];
+    
+    [self syncSessions];
+    
     return YES;
 }
 
@@ -66,16 +65,16 @@
             for (TWSession* session in results)
             {
                 NSLog(@"%@",session);
-
+                
                 if (![storeService containsSession:session]){
                     if (![storeService saveSession:session error:&error]) {
                         NSLog(@"*** Couldn't add the session. Error: %@", [error localizedFailureReason]);
                     }
-
+                    
                 }else {
                     NSLog(@"Session exists");
                 }
-
+                
             }
         }
         else {
@@ -141,7 +140,7 @@
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
-
+        
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }

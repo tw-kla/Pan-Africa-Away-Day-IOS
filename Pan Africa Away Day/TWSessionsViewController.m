@@ -23,8 +23,11 @@
 
 
 NSString * const MSEventCellReuseIdentifier = @"MSEventCellReuseIdentifier";
+
 NSString * const MSDayColumnHeaderReuseIdentifier = @"MSDayColumnHeaderReuseIdentifier";
+
 NSString * const MSTimeRowHeaderReuseIdentifier = @"MSTimeRowHeaderReuseIdentifier";
+
 @interface TWSessionsViewController ()
 
 @end
@@ -50,22 +53,22 @@ static const int kBatchSize = 40;
 @implementation TWSessionsViewController
 
 
-- (id)init
-{
-    self.collectionViewCalendarLayout = [[MSCollectionViewCalendarLayout alloc] init];
-    self.collectionViewCalendarLayout.delegate = self;
-    self = [super initWithCollectionViewLayout:self.collectionViewCalendarLayout];
-    self.title = @"Sessions";
-    [self.tabBarItem setImage:[UIImage imageNamed:@"IconSession"]];
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+        self.collectionViewCalendarLayout = [[MSCollectionViewCalendarLayout alloc] init];
+        self.collectionViewCalendarLayout.delegate = self;
+        self = [super initWithCollectionViewLayout:self.collectionViewCalendarLayout];
+        [self.tabBarItem setImage:[UIImage imageNamed:@"IconSession"]];
+         self.title = @"Sessions";
+
+    }
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)decoder{
-   return  [self init];
-    
-    
-}
 - (UICollectionViewLayout *)collectionViewLayout {
     return [[MSCollectionViewCalendarLayout alloc] init];
 }
@@ -73,7 +76,7 @@ static const int kBatchSize = 40;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Sessions";
+   
     TWAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     self.managedObjectContext = appDelegate.managedObjectContext;
 
@@ -97,6 +100,7 @@ static const int kBatchSize = 40;
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"startTime" ascending:YES]];
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"day" cacheName:nil];
     self.fetchedResultsController.delegate = self;
+    
     [self.fetchedResultsController performFetch:nil];
 }
 

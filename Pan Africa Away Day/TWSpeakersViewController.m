@@ -18,6 +18,18 @@
 
 @implementation TWSpeakersViewController
 @synthesize speakers,tableView;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+                [self.tabBarItem setImage:[UIImage imageNamed:@"IconSpeaker"]];
+        self.title = @"Speakers";
+        
+    }
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
