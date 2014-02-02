@@ -14,6 +14,8 @@
 #import "TWSessionsViewController.h"
 #import "TWHomeViewController.h"
 #import "TWSpeakersViewController.h"
+#import "CRGradientNavigationBar.h"
+#import "UIColor+HexString.h"
 
 @interface TWAppDelegate ()
 
@@ -30,18 +32,25 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
     
+    UIColor *tintColor = [UIColor colorWithHexString:@"#00a25b"];
+    
+    [self.window setTintColor:tintColor];
+    
     self.tabBarController = [[UITabBarController alloc] init];
     
-    TWSessionsViewController * sessionsViewController = [[TWSessionsViewController alloc]initWithNibName:@"TWSessionsView" bundle:nil];
+    UIColor *firstColor = [UIColor colorWithHexString:@"#9EEDBF"];
+    UIColor *secondColor = [UIColor colorWithHexString:@"#5ED897"];;
     
-    TWHomeViewController * homeViewController = [[TWHomeViewController alloc]initWithNibName:@"TWHomeViewController" bundle:nil];
+    NSArray *colors = [NSArray arrayWithObjects:firstColor, secondColor, nil];
     
-    TWSpeakersViewController * speakersViewController =  [[TWSpeakersViewController alloc ]initWithNibName:@"TWSpeakersView" bundle:nil];
-    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:homeViewController];
-   
-    UINavigationController *sessionsNav = [[UINavigationController alloc] initWithRootViewController:sessionsViewController];
     
-    UINavigationController *speakersNav = [[UINavigationController alloc] initWithRootViewController:speakersViewController];
+    UINavigationController *homeNav = [self wrapViewControllerInNavigationController:[[TWHomeViewController alloc]initWithNibName:@"TWHomeViewController" bundle:nil] withColors:colors];
+    
+    
+    UINavigationController *sessionsNav = [self wrapViewControllerInNavigationController:[[TWSessionsViewController alloc]initWithNibName:@"TWSessionsView" bundle:nil] withColors:colors];
+    
+    UINavigationController *speakersNav = [self wrapViewControllerInNavigationController:[[TWSpeakersViewController alloc ]initWithNibName:@"TWSpeakersView" bundle:nil] withColors:colors];
+    
     
     self.tabBarController.viewControllers = @[homeNav,sessionsNav,speakersNav];
     
@@ -53,7 +62,13 @@
     
     return YES;
 }
-
+- (UINavigationController *) wrapViewControllerInNavigationController:(UIViewController *)controller withColors:(NSArray *)colors{
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithNavigationBarClass:[CRGradientNavigationBar class] toolbarClass:nil];
+    [[CRGradientNavigationBar appearance] setBarTintGradientColors:colors];
+    [[navigationController navigationBar] setTranslucent:NO];
+    navigationController.viewControllers = @[controller];
+    return navigationController;
+}
 - (void)syncSessions {
     TWSessionAPIService * sessionsCatalog = [[TWSessionAPIService alloc] init];
     TWSessionStoreService * storeService = [[TWSessionStoreService alloc] initWithContext:self.managedObjectContext];

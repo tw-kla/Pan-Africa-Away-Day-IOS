@@ -24,6 +24,5 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
- 
-
+- (UINavigationController *) wrapViewControllerInNavigationController:(UIViewController *)controller withColors:(NSArray *)colors;
 @end

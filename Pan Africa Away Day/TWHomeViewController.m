@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
        
-        self.title = @"Home";
+        self.title = @"Pan Africa Away Day";
         [self.tabBarItem setImage:[UIImage imageNamed:@"IconHome"]];
     }
     return self;

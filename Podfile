@@ -8,6 +8,8 @@ pod 'MSCollectionViewCalendarLayout'
 pod 'Reachability'
 pod 'UIColor-Utilities', '~> 1.0'
 pod 'Masonry', '~> 0.2'
+pod 'CRGradientNavigationBar'
+pod 'UIColor-HexString'
 end
 
 target "Away Day 2014Tests" do
