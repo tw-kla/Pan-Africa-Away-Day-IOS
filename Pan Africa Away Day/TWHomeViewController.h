@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TWHomeViewController : UIViewController
-
+@interface TWHomeViewController : UIViewController <NSFetchedResultsControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong,nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @end

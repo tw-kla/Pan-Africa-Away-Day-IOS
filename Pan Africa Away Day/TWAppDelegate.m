@@ -17,6 +17,7 @@
 #import "CRGradientNavigationBar.h"
 #import "UIColor+HexString.h"
 
+
 @interface TWAppDelegate ()
 
 
@@ -42,9 +43,9 @@
     UIColor *secondColor = [UIColor colorWithHexString:@"#5ED897"];;
     
     NSArray *colors = [NSArray arrayWithObjects:firstColor, secondColor, nil];
+
     
-    
-    UINavigationController *homeNav = [self wrapViewControllerInNavigationController:[[TWHomeViewController alloc]initWithNibName:@"TWHomeViewController" bundle:nil] withColors:colors];
+    TWHomeViewController *homeNav = [[TWHomeViewController alloc]initWithNibName:@"TWHomeViewController" bundle:nil];
     
     
     UINavigationController *sessionsNav = [self wrapViewControllerInNavigationController:[[TWSessionsViewController alloc]initWithNibName:@"TWSessionsView" bundle:nil] withColors:colors];

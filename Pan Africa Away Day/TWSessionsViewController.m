@@ -63,7 +63,7 @@ static const int kBatchSize = 40;
         self.collectionViewCalendarLayout.delegate = self;
         self = [super initWithCollectionViewLayout:self.collectionViewCalendarLayout];
         [self.tabBarItem setImage:[UIImage imageNamed:@"IconSession"]];
-         self.title = @"Sessions";
+         self.title = @"Schedule";
 
     }
     return self;

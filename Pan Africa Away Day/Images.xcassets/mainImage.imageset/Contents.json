@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "administrator-25.png"
+      "filename" : "appMainImage1x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "administrator-50.png"
+      "filename" : "appMainImage2x.png"
     }
   ],
   "info" : {

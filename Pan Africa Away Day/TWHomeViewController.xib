@@ -6,17 +6,57 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWHomeViewController">
             <connections>
+                <outlet property="tableView" destination="hFc-dg-Cpy" id="fvo-3U-VVM"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="1">
-            <rect key="frame" x="0.0" y="94" width="320" height="474"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImage" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-KP-sL7">
+                    <rect key="frame" x="0.0" y="21" width="320" height="240"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oho-kO-ao2">
+                    <rect key="frame" x="99" y="261" width="123" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="Keynotes"/>
+                        <segment title="Talks"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-dg-Cpy">
+                    <rect key="frame" x="0.0" y="291" width="320" height="277"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="277" id="qpw-SG-FDq"/>
+                    </constraints>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="NFD-QS-u1o"/>
+                        <outlet property="delegate" destination="-1" id="bqT-FR-q1k"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hFc-dg-Cpy" secondAttribute="bottom" id="5xa-tJ-cyg"/>
+                <constraint firstItem="hFc-dg-Cpy" firstAttribute="top" secondItem="oho-kO-ao2" secondAttribute="bottom" constant="2" id="AYj-on-cLx"/>
+                <constraint firstItem="hFc-dg-Cpy" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Frt-J9-uoA"/>
+                <constraint firstItem="hFc-dg-Cpy" firstAttribute="trailing" secondItem="jHq-KP-sL7" secondAttribute="trailing" id="GGG-k3-R57"/>
+                <constraint firstItem="hFc-dg-Cpy" firstAttribute="leading" secondItem="jHq-KP-sL7" secondAttribute="leading" id="e1Y-YT-Dc1"/>
+                <constraint firstItem="oho-kO-ao2" firstAttribute="top" secondItem="jHq-KP-sL7" secondAttribute="bottom" id="goi-dk-LbF"/>
+                <constraint firstItem="hFc-dg-Cpy" firstAttribute="centerX" secondItem="oho-kO-ao2" secondAttribute="centerX" id="nOg-HI-Mo2"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="mainImage" width="320" height="240"/>
+    </resources>
 </document>
