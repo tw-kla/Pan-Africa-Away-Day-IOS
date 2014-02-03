@@ -7,11 +7,8 @@
 //
 
 #import "TWSessionsViewController.h"
-#import "TWSessionAPIService.h"
-#import "TWSession.h"
-#import "Mantle.h"
+#import "Session.h"
 #import "TWAppDelegate.h"
-#import "TWSessionStoreService.h"
 #import "MSEventCell.h"
 #import "MSDayColumnHeader.h"
 #import "MSTimeRowHeader.h"
@@ -161,19 +158,19 @@ static const int kBatchSize = 40;
 - (NSDate *)collectionView:(UICollectionView *)collectionView layout:(MSCollectionViewCalendarLayout *)collectionViewCalendarLayout dayForSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController.sections objectAtIndex:section];
-    TWSession *event = [sectionInfo.objects firstObject];
+    Session *event = [sectionInfo.objects firstObject];
     return event.day;
 }
 
 - (NSDate *)collectionView:(UICollectionView *)collectionView layout:(MSCollectionViewCalendarLayout *)collectionViewCalendarLayout startTimeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    TWSession *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Session *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
     return [event.startTime toLocalTime];
 }
 
 - (NSDate *)collectionView:(UICollectionView *)collectionView layout:(MSCollectionViewCalendarLayout *)collectionViewCalendarLayout endTimeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    TWSession *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Session *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
         return [event.endTime toLocalTime];
 }
 

@@ -7,15 +7,11 @@
 //
 
 #import "TWAppDelegate.h"
-#import "TWSessionAPIService.h"
-#import "TWSessionStoreService.h"
-#import "TWSession.h"
-#import "Reachability.h"
 #import "TWSessionsViewController.h"
 #import "TWHomeViewController.h"
 #import "TWSpeakersViewController.h"
 #import "CRGradientNavigationBar.h"
-#import "UIColor+HexString.h"
+
 
 
 @interface TWAppDelegate ()
@@ -59,7 +55,6 @@
     
     [self.window makeKeyAndVisible];
     
-    [self syncSessions];
     
     return YES;
 }
@@ -70,34 +65,7 @@
     navigationController.viewControllers = @[controller];
     return navigationController;
 }
-- (void)syncSessions {
-    TWSessionAPIService * sessionsCatalog = [[TWSessionAPIService alloc] init];
-    TWSessionStoreService * storeService = [[TWSessionStoreService alloc] initWithContext:self.managedObjectContext];
-    [sessionsCatalog allSessions:^(NSArray *results, NSError *error) {
-        if (error == nil) {
-            NSDictionary *JSONDictionary = [MTLJSONAdapter JSONDictionaryFromModel:[results objectAtIndex:0]];
-            NSLog(@"%@ results" ,JSONDictionary);
-            NSError *error;
-            for (TWSession* session in results)
-            {
-                NSLog(@"%@",session);
-                
-                if (![storeService containsSession:session]){
-                    if (![storeService saveSession:session error:&error]) {
-                        NSLog(@"*** Couldn't add the session. Error: %@", [error localizedFailureReason]);
-                    }
-                    
-                }else {
-                    NSLog(@"Session exists");
-                }
-                
-            }
-        }
-        else {
-            NSLog(@"[search error] %@", [error localizedDescription]);
-        }
-    }];
-}
+
 
 
 - (void)saveContext

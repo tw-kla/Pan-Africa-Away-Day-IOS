@@ -7,9 +7,6 @@
 //
 
 #import "TWSpeakersViewController.h"
-#import "TWSpeakersAPIService.h"
-#import "TWSpeaker.h"
-#import "Mantle.h"
 #import "UIImageView+AFNetworking.h"
 
 @interface TWSpeakersViewController ()
@@ -35,26 +32,12 @@
     [super viewDidLoad];
 	self.title = @"Speakers";
     
-    [self setupSpeakers];
+  
 }
 
  
 
-- (void)setupSpeakers
-{
-    TWSpeakersAPIService * service = [[TWSpeakersAPIService alloc] init];
-    [service allSpeakers:^(NSArray *results, NSError *error) {
-        if (error == nil) {
-            NSDictionary *JSONDictionary = [MTLJSONAdapter JSONDictionaryFromModel:[results objectAtIndex:0]];
-            NSLog(@"%@ results" ,JSONDictionary);
-            speakers = results;
-            [tableView reloadData];
-        }
-        else {
-            NSLog(@"[search error] %@", [error localizedDescription]);
-        }
-    }];
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -71,8 +54,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [(TWSpeaker *)[speakers objectAtIndex:indexPath.row] name] ;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:[(TWSpeaker *)[speakers objectAtIndex:indexPath.row] photo]]];
+   // style the cell
     return cell;
 }
 

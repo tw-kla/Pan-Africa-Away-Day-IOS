@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AC4C87947BAA76E941F9D2F /* TWSessionStoreService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4CA92D6B39CDF7A192C2B /* TWSessionStoreService.m */; };
-		360A61921889746C00951FA7 /* TWSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A61911889746C00951FA7 /* TWSession.m */; };
-		360A61981889769800951FA7 /* TWRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A61971889769800951FA7 /* TWRoom.m */; };
-		360A619B18897A7800951FA7 /* TWSessionAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A619A18897A7800951FA7 /* TWSessionAPIService.m */; };
-		360A619E188A3CAD00951FA7 /* TWSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A619D188A3CAD00951FA7 /* TWSpeaker.m */; };
-		360A61A2188A5B5300951FA7 /* TWSpeakersAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A61A1188A5B5300951FA7 /* TWSpeakersAPIService.m */; };
 		360A61AA188AD37100951FA7 /* MSEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A61A5188AD37100951FA7 /* MSEventCell.m */; };
 		360A61AB188AD37100951FA7 /* MSDayColumnHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A61A7188AD37100951FA7 /* MSDayColumnHeader.m */; };
 		360A61AF188AE6C500951FA7 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A61AE188AE6C500951FA7 /* Room.m */; };
@@ -67,18 +61,6 @@
 /* Begin PBXFileReference section */
 		150F1788DD504C9FBC4E804C /* libPods-Pan Africa Away Day.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pan Africa Away Day.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1742C2E308974284B044FE92 /* Pods-Pan Africa Away DayTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pan Africa Away DayTests.xcconfig"; path = "Pods/Pods-Pan Africa Away DayTests.xcconfig"; sourceTree = "<group>"; };
-		1AC4C64D0E2946050D1656CA /* TWSessionStoreService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSessionStoreService.h; sourceTree = "<group>"; };
-		1AC4CA92D6B39CDF7A192C2B /* TWSessionStoreService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSessionStoreService.m; sourceTree = "<group>"; };
-		360A61901889746C00951FA7 /* TWSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSession.h; sourceTree = "<group>"; };
-		360A61911889746C00951FA7 /* TWSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSession.m; sourceTree = "<group>"; };
-		360A61961889769800951FA7 /* TWRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRoom.h; sourceTree = "<group>"; };
-		360A61971889769800951FA7 /* TWRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRoom.m; sourceTree = "<group>"; };
-		360A619918897A7800951FA7 /* TWSessionAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSessionAPIService.h; sourceTree = "<group>"; };
-		360A619A18897A7800951FA7 /* TWSessionAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSessionAPIService.m; sourceTree = "<group>"; };
-		360A619C188A3CAD00951FA7 /* TWSpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSpeaker.h; sourceTree = "<group>"; };
-		360A619D188A3CAD00951FA7 /* TWSpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSpeaker.m; sourceTree = "<group>"; };
-		360A61A0188A5B5300951FA7 /* TWSpeakersAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSpeakersAPIService.h; sourceTree = "<group>"; };
-		360A61A1188A5B5300951FA7 /* TWSpeakersAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSpeakersAPIService.m; sourceTree = "<group>"; };
 		360A61A5188AD37100951FA7 /* MSEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSEventCell.m; sourceTree = "<group>"; };
 		360A61A6188AD37100951FA7 /* MSEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSEventCell.h; sourceTree = "<group>"; };
 		360A61A7188AD37100951FA7 /* MSDayColumnHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDayColumnHeader.m; sourceTree = "<group>"; };
@@ -219,12 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				360A61AC188AE67C00951FA7 /* coredata */,
-				360A61901889746C00951FA7 /* TWSession.h */,
-				360A61911889746C00951FA7 /* TWSession.m */,
-				360A61961889769800951FA7 /* TWRoom.h */,
-				360A61971889769800951FA7 /* TWRoom.m */,
-				360A619C188A3CAD00951FA7 /* TWSpeaker.h */,
-				360A619D188A3CAD00951FA7 /* TWSpeaker.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -232,12 +208,6 @@
 		360A619F188A3D5D00951FA7 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				360A619918897A7800951FA7 /* TWSessionAPIService.h */,
-				360A619A18897A7800951FA7 /* TWSessionAPIService.m */,
-				360A61A0188A5B5300951FA7 /* TWSpeakersAPIService.h */,
-				360A61A1188A5B5300951FA7 /* TWSpeakersAPIService.m */,
-				1AC4CA92D6B39CDF7A192C2B /* TWSessionStoreService.m */,
-				1AC4C64D0E2946050D1656CA /* TWSessionStoreService.h */,
 			);
 			name = services;
 			sourceTree = "<group>";
@@ -530,22 +500,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				360A619B18897A7800951FA7 /* TWSessionAPIService.m in Sources */,
 				362C49601875438000950782 /* main.m in Sources */,
 				362C49641875438000950782 /* TWAppDelegate.m in Sources */,
 				362C49671875438000950782 /* Pan_Africa_Away_Day.xcdatamodeld in Sources */,
 				360A61D6188AE94600951FA7 /* MSCurrentTimeGridline.m in Sources */,
-				360A61921889746C00951FA7 /* TWSession.m in Sources */,
 				360A61AB188AD37100951FA7 /* MSDayColumnHeader.m in Sources */,
 				360A61B5188AE6C600951FA7 /* Speaker.m in Sources */,
 				360A61D4188AE94600951FA7 /* MSDayColumnHeaderBackground.m in Sources */,
-				360A619E188A3CAD00951FA7 /* TWSpeaker.m in Sources */,
 				360A61D9188AE9EB00951FA7 /* MSTimeRowHeader.m in Sources */,
 				360A61AA188AD37100951FA7 /* MSEventCell.m in Sources */,
 				36811FDC189D22AC0062E12B /* TWHomeViewController.m in Sources */,
-				360A61A2188A5B5300951FA7 /* TWSpeakersAPIService.m in Sources */,
 				36E94626187580330003D526 /* TWInformationViewController.m in Sources */,
-				360A61981889769800951FA7 /* TWRoom.m in Sources */,
 				36E94620187580090003D526 /* TWSessionsViewController.m in Sources */,
 				360A61B2188AE6C500951FA7 /* Session.m in Sources */,
 				360A61DF188AEA4300951FA7 /* MSTimeRowHeaderBackground.m in Sources */,
@@ -553,7 +518,6 @@
 				360A61D3188AE94600951FA7 /* MSGridline.m in Sources */,
 				360A61AF188AE6C500951FA7 /* Room.m in Sources */,
 				360A61DC188AEA3200951FA7 /* MSCurrentTimeIndicator.m in Sources */,
-				1AC4C87947BAA76E941F9D2F /* TWSessionStoreService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
