@@ -29,27 +29,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
     
-#pragma restkit stuff
-    
-    NSError *error = nil;
-    NSURL *modelURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Pan_Africa_Away_Day" ofType:@"momd"]];
-
-    
-    NSManagedObjectModel *managedObjectModel = [[[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL] mutableCopy];
-    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
-    
- 
-    [managedObjectStore createPersistentStoreCoordinator];
-    
-    NSPersistentStore __unused *persistentStore = [managedObjectStore addInMemoryPersistentStore:&error];
-    NSAssert(persistentStore, @"Failed to add persistent store: %@", error);
-    
-    [managedObjectStore createManagedObjectContexts];
-    
-    [RKManagedObjectStore setDefaultStore:managedObjectStore];
     
     
-    
+#pragma color stuff
     
     UIColor *tintColor = [UIColor colorWithHexString:@"#00a25b"];
     
@@ -62,9 +44,10 @@
     
     NSArray *colors = [NSArray arrayWithObjects:firstColor, secondColor, nil];
 
+#pragma controller setup
     
     TWHomeViewController *homeNav = [[TWHomeViewController alloc]initWithNibName:@"TWHomeViewController" bundle:nil];
-    
+
     
     UINavigationController *sessionsNav = [self wrapViewControllerInNavigationController:[[TWSessionsViewController alloc]initWithNibName:@"TWSessionsView" bundle:nil] withColors:colors];
     

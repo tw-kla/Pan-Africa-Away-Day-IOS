@@ -22,6 +22,6 @@
 #import <CupertinoYankee/NSDate+CupertinoYankee.h>
 #import <UIColor-Utilities/UIColor+Expanded.h>
 #import <Masonry/Masonry.h>
-#import <RestKit/RestKit.h>
 #import "MBProgressHUD.h"
+#import "AFNetworking.h"
 #endif

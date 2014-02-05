@@ -10,6 +10,8 @@
 #import "TWHomeViewController.h"
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
+#import <OCMock/OCMock.h>
+#import "TWAppDelegate.h"
 
 @interface TWHomeViewControllerSpec : XCTestCase
 @property(retain,strong) TWHomeViewController *sut;
@@ -21,6 +23,11 @@
 {
     [super setUp];
     sut = [[TWHomeViewController alloc]init];
+    TWAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    sut.managedObjectContext = appDelegate.managedObjectContext;
+  
+    [sut view];
+    
 }
 
 - (void)tearDown
@@ -32,20 +39,33 @@
 
 - (void)testNavigationBarShouldBeConnected
 {
-    [sut view];
+    
     assertThat(sut.navigationBar, is(notNilValue()));
 }
 
 - (void)testSyncBarButtonShouldBeConnected
 {
-    [sut view];
+   
     assertThat(sut.syncButton, is(notNilValue()));
 }
 
 - (void)testSyncButtonAction
 {
-    [sut view];
+ 
     assertThat(NSStringFromSelector ([sut.syncButton action]),equalTo(@"syncSessionsAndSpeakers:"));
+}
+
+- (void)testSegementControlShouldBeConnected
+{
+   
+    assertThat(sut.sessionTypeSegementControl, is(notNilValue()));
+}
+
+- (void)testSessionTypeSegementControlButtonAction
+{
+    [sut view];
+    assertThat([sut.sessionTypeSegementControl actionsForTarget:sut forControlEvent:UIControlEventValueChanged],
+               contains(@"segmentControlValueChanged:", nil));
 }
 
 

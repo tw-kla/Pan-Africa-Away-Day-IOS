@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWHomeViewController">
             <connections>
                 <outlet property="navigationBar" destination="n8c-dj-VS7" id="f55-ap-MU9"/>
+                <outlet property="sessionTypeSegementControl" destination="oho-kO-ao2" id="rGj-6e-Daa"/>
                 <outlet property="syncButton" destination="aqU-5p-2kv" id="qM7-DJ-hMM"/>
                 <outlet property="tableView" destination="hFc-dg-Cpy" id="fvo-3U-VVM"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -28,6 +29,9 @@
                         <segment title="Keynotes"/>
                         <segment title="Talks"/>
                     </segments>
+                    <connections>
+                        <action selector="segmentControlValueChanged:" destination="-1" eventType="valueChanged" id="bhU-Ud-4oe"/>
+                    </connections>
                 </segmentedControl>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-dg-Cpy">
                     <rect key="frame" x="0.0" y="291" width="320" height="277"/>

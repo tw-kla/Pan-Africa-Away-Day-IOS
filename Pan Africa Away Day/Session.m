@@ -1,26 +1,26 @@
 //
 //  Session.m
-//  Pan Africa Away Day
+//  Away Day 2014
 //
-//  Created by James Muranga on 1/18/14.
+//  Created by James Muranga on 2/6/14.
 //  Copyright (c) 2014 Thoughtworks. All rights reserved.
 //
 
 #import "Session.h"
 #import "Room.h"
+#import "Speaker.h"
 
 
 @implementation Session
 
 @dynamic endTime;
+@dynamic isKeynote;
 @dynamic serverId;
 @dynamic sessionDescription;
 @dynamic startTime;
-@dynamic isKeynote;
 @dynamic title;
 @dynamic room;
 @dynamic speakers;
-
 
 - (NSDate *)day
 {

@@ -14,5 +14,6 @@
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *syncButton;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sessionTypeSegementControl;
 
 @end
