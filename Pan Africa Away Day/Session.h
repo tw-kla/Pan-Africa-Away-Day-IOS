@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSNumber * serverId;
 @property (nonatomic, retain) NSString * sessionDescription;
 @property (nonatomic, retain) NSDate * startTime;
+@property (nonatomic) Boolean  isKeynote;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) Room *room;
 @property (nonatomic, retain) NSManagedObject *speakers;

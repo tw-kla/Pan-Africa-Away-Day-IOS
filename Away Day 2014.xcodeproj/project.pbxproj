@@ -36,7 +36,6 @@
 		36811FDD189D22AC0062E12B /* TWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36811FDB189D22AC0062E12B /* TWHomeViewController.xib */; };
 		36811FDF189D25190062E12B /* TWSessionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36811FDE189D25190062E12B /* TWSessionsView.xib */; };
 		36811FE1189D2BDA0062E12B /* TWSpeakersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36811FE0189D2BDA0062E12B /* TWSpeakersView.xib */; };
-		368176EB18769C1500494B5E /* TWMenuViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 368176EA18769C1500494B5E /* TWMenuViewControllerSpec.m */; };
 		36E94620187580090003D526 /* TWSessionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E9461F187580090003D526 /* TWSessionsViewController.m */; };
 		36E94623187580200003D526 /* TWSpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94622187580200003D526 /* TWSpeakersViewController.m */; };
 		36E94626187580330003D526 /* TWInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94625187580330003D526 /* TWInformationViewController.m */; };
@@ -44,6 +43,7 @@
 		36F873D61876B3F3006C022A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D51876B3F3006C022A /* SystemConfiguration.framework */; };
 		36F873D81876B40E006C022A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D71876B40E006C022A /* CFNetwork.framework */; };
 		36F873DA1876B420006C022A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D91876B420006C022A /* Security.framework */; };
+		36FE40E818A2831300DA19FA /* TWHomeViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FE40E718A2831300DA19FA /* TWHomeViewControllerSpec.m */; };
 		69AEFA4A500246E0A73E4A25 /* libPods-Away Day 2014Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B5541BEF44409BAABFBC9B /* libPods-Away Day 2014Tests.a */; };
 		D50C08EA80E94E588FF3DF42 /* libPods-Away Day 2014.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FC2BBA16834824872367AB /* libPods-Away Day 2014.a */; };
 /* End PBXBuildFile section */
@@ -105,7 +105,6 @@
 		36811FDB189D22AC0062E12B /* TWHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWHomeViewController.xib; sourceTree = "<group>"; };
 		36811FDE189D25190062E12B /* TWSessionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWSessionsView.xib; sourceTree = "<group>"; };
 		36811FE0189D2BDA0062E12B /* TWSpeakersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWSpeakersView.xib; sourceTree = "<group>"; };
-		368176EA18769C1500494B5E /* TWMenuViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMenuViewControllerSpec.m; sourceTree = "<group>"; };
 		36E9461E187580090003D526 /* TWSessionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSessionsViewController.h; sourceTree = "<group>"; };
 		36E9461F187580090003D526 /* TWSessionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSessionsViewController.m; sourceTree = "<group>"; };
 		36E94621187580200003D526 /* TWSpeakersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSpeakersViewController.h; sourceTree = "<group>"; };
@@ -116,6 +115,7 @@
 		36F873D51876B3F3006C022A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		36F873D71876B40E006C022A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		36F873D91876B420006C022A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		36FE40E718A2831300DA19FA /* TWHomeViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWHomeViewControllerSpec.m; sourceTree = "<group>"; };
 		44DE0F2D5D9A433EBF375A6C /* Pods-Away Day 2014.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Away Day 2014.xcconfig"; path = "Pods/Pods-Away Day 2014.xcconfig"; sourceTree = "<group>"; };
 		482D9AB11B1D429490A286B9 /* Pods-Away Day 2014Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Away Day 2014Tests.xcconfig"; path = "Pods/Pods-Away Day 2014Tests.xcconfig"; sourceTree = "<group>"; };
 		53FC2BBA16834824872367AB /* libPods-Away Day 2014.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Away Day 2014.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,7 +200,12 @@
 		360A618F188973AF00951FA7 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				360A61AC188AE67C00951FA7 /* coredata */,
+				360A61B3188AE6C600951FA7 /* Speaker.h */,
+				360A61B4188AE6C600951FA7 /* Speaker.m */,
+				360A61B0188AE6C500951FA7 /* Session.h */,
+				360A61B1188AE6C500951FA7 /* Session.m */,
+				360A61AD188AE6C500951FA7 /* Room.h */,
+				360A61AE188AE6C500951FA7 /* Room.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -210,19 +215,6 @@
 			children = (
 			);
 			name = services;
-			sourceTree = "<group>";
-		};
-		360A61AC188AE67C00951FA7 /* coredata */ = {
-			isa = PBXGroup;
-			children = (
-				360A61B3188AE6C600951FA7 /* Speaker.h */,
-				360A61B4188AE6C600951FA7 /* Speaker.m */,
-				360A61B0188AE6C500951FA7 /* Session.h */,
-				360A61B1188AE6C500951FA7 /* Session.m */,
-				360A61AD188AE6C500951FA7 /* Room.h */,
-				360A61AE188AE6C500951FA7 /* Room.m */,
-			);
-			name = coredata;
 			sourceTree = "<group>";
 		};
 		362C49451875437F00950782 = {
@@ -326,7 +318,7 @@
 		368176E9187699F300494B5E /* specs */ = {
 			isa = PBXGroup;
 			children = (
-				368176EA18769C1500494B5E /* TWMenuViewControllerSpec.m */,
+				36FE40E718A2831300DA19FA /* TWHomeViewControllerSpec.m */,
 			);
 			name = specs;
 			sourceTree = "<group>";
@@ -525,7 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368176EB18769C1500494B5E /* TWMenuViewControllerSpec.m in Sources */,
+				36FE40E818A2831300DA19FA /* TWHomeViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

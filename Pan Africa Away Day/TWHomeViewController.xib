@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWHomeViewController">
             <connections>
+                <outlet property="navigationBar" destination="n8c-dj-VS7" id="f55-ap-MU9"/>
+                <outlet property="syncButton" destination="aqU-5p-2kv" id="qM7-DJ-hMM"/>
                 <outlet property="tableView" destination="hFc-dg-Cpy" id="fvo-3U-VVM"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -40,6 +42,20 @@
                         <outlet property="delegate" destination="-1" id="bqT-FR-q1k"/>
                     </connections>
                 </tableView>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-dj-VS7">
+                    <rect key="frame" x="235" y="21" width="85" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <items>
+                        <navigationItem id="kLF-Mj-s0K">
+                            <barButtonItem key="rightBarButtonItem" title="Item" image="sync" style="plain" id="aqU-5p-2kv">
+                                <connections>
+                                    <action selector="syncSessionsAndSpeakers:" destination="-1" id="MIv-1r-I9v"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -58,5 +74,6 @@
     </objects>
     <resources>
         <image name="mainImage" width="320" height="240"/>
+        <image name="sync" width="25" height="25"/>
     </resources>
 </document>

@@ -14,7 +14,7 @@
 @end
 
 @implementation TWHomeViewController
-@synthesize tableView;
+@synthesize tableView,navigationBar,syncButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,6 +47,8 @@
     
     [tableView setTintColor:[UIColor greenColor]];
     
+    [navigationBar setShadowImage:[[UIImage alloc] init]];
+    [navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
     
 }
 
@@ -94,6 +96,15 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 90;
+}
+- (IBAction)syncSessionsAndSpeakers:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        // Do something...
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
 }
 
 @end

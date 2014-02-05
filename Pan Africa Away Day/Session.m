@@ -16,6 +16,7 @@
 @dynamic serverId;
 @dynamic sessionDescription;
 @dynamic startTime;
+@dynamic isKeynote;
 @dynamic title;
 @dynamic room;
 @dynamic speakers;

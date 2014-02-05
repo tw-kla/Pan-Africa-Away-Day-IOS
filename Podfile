@@ -8,9 +8,11 @@ pod 'UIColor-Utilities', '~> 1.0'
 pod 'Masonry', '~> 0.2'
 pod 'CRGradientNavigationBar'
 pod 'RestKit', '~> 0.20.0'
+pod 'MBProgressHUD', '~> 0.8'
 end
 
 target "Away Day 2014Tests" do
 pod 'Kiwi/XCTest'
+pod 'OCHamcrest', '~> 3.0'
 end
 
