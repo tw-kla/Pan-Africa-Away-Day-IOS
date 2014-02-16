@@ -2,7 +2,7 @@
 //  Room.m
 //  Away Day 2014
 //
-//  Created by James Muranga on 2/6/14.
+//  Created by James Muranga on 2/14/14.
 //  Copyright (c) 2014 Thoughtworks. All rights reserved.
 //
 

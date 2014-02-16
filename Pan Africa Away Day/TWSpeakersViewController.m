@@ -19,38 +19,34 @@
 @implementation TWSpeakersViewController
 @synthesize tableView;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-                [self.tabBarItem setImage:[UIImage imageNamed:@"IconSpeaker"]];
+        [self.tabBarItem setImage:[UIImage imageNamed:@"IconSpeaker"]];
         self.title = @"Speakers";
-        
+
     }
     return self;
 }
-- (void)viewDidLoad
-{
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-	self.title = @"Speakers";
-    
-    
+    self.title = @"Speakers";
+
+
     TWAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     self.managedObjectContext = appDelegate.managedObjectContext;
-    
-    
+
+
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Speaker"];
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     self.fetchedResultsController.delegate = self;
-    
+
     [self.fetchedResultsController performFetch:nil];
-  
+
 }
-
- 
-
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -62,27 +58,24 @@
     return self.fetchedResultsController.fetchedObjects.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)givenTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)givenTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
-    
+
     UITableViewCell *cell = [givenTableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
+
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     Speaker *speaker = [self.fetchedResultsController objectAtIndexPath:indexPath];
-  
-    
-    cell.textLabel.text = speaker.name ;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:speaker.photo]];
-   // style the cell
+
+
+    cell.textLabel.text = speaker.name;
+
     return cell;
 }
 
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView reloadData];
 }
 

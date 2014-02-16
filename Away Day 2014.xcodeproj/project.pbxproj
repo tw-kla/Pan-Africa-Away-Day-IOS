@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3604444818A2E40000EA9D29 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604444718A2E40000EA9D29 /* Session.m */; };
-		3604444918A2E40000EA9D29 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604444718A2E40000EA9D29 /* Session.m */; };
-		3604444C18A2E40000EA9D29 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604444B18A2E40000EA9D29 /* Speaker.m */; };
-		3604444D18A2E40000EA9D29 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604444B18A2E40000EA9D29 /* Speaker.m */; };
-		3604445018A2E40000EA9D29 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604444F18A2E40000EA9D29 /* Room.m */; };
-		3604445118A2E40000EA9D29 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 3604444F18A2E40000EA9D29 /* Room.m */; };
 		360A61AA188AD37100951FA7 /* MSEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A61A5188AD37100951FA7 /* MSEventCell.m */; };
 		360A61AB188AD37100951FA7 /* MSDayColumnHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A61A7188AD37100951FA7 /* MSDayColumnHeader.m */; };
 		360A61D3188AE94600951FA7 /* MSGridline.m in Sources */ = {isa = PBXBuildFile; fileRef = 360A61C9188AE94600951FA7 /* MSGridline.m */; };
@@ -39,9 +33,21 @@
 		36811FDD189D22AC0062E12B /* TWHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36811FDB189D22AC0062E12B /* TWHomeViewController.xib */; };
 		36811FDF189D25190062E12B /* TWSessionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36811FDE189D25190062E12B /* TWSessionsView.xib */; };
 		36811FE1189D2BDA0062E12B /* TWSpeakersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36811FE0189D2BDA0062E12B /* TWSpeakersView.xib */; };
+		36D61AFA18B0385900E7D923 /* TWHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61AF518B0385900E7D923 /* TWHTTPClient.m */; };
+		36D61AFB18B0385900E7D923 /* TWHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61AF518B0385900E7D923 /* TWHTTPClient.m */; };
+		36D61AFC18B0385900E7D923 /* TWRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61AF718B0385900E7D923 /* TWRecord.m */; };
+		36D61AFD18B0385900E7D923 /* TWRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61AF718B0385900E7D923 /* TWRecord.m */; };
+		36D61AFE18B0385900E7D923 /* TWServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61AF918B0385900E7D923 /* TWServer.m */; };
+		36D61AFF18B0385900E7D923 /* TWServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61AF918B0385900E7D923 /* TWServer.m */; };
 		36E94620187580090003D526 /* TWSessionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E9461F187580090003D526 /* TWSessionsViewController.m */; };
 		36E94623187580200003D526 /* TWSpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94622187580200003D526 /* TWSpeakersViewController.m */; };
 		36E94626187580330003D526 /* TWInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94625187580330003D526 /* TWInformationViewController.m */; };
+		36EE829318AE97D7001F4512 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EE829218AE97D7001F4512 /* Room.m */; };
+		36EE829418AE97D7001F4512 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EE829218AE97D7001F4512 /* Room.m */; };
+		36EE829718AE97D8001F4512 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EE829618AE97D8001F4512 /* Session.m */; };
+		36EE829818AE97D8001F4512 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EE829618AE97D8001F4512 /* Session.m */; };
+		36EE829B18AE97D8001F4512 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EE829A18AE97D8001F4512 /* Speaker.m */; };
+		36EE829C18AE97D8001F4512 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EE829A18AE97D8001F4512 /* Speaker.m */; };
 		36F873D41876B3EC006C022A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D31876B3EC006C022A /* MobileCoreServices.framework */; };
 		36F873D61876B3F3006C022A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D51876B3F3006C022A /* SystemConfiguration.framework */; };
 		36F873D81876B40E006C022A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36F873D71876B40E006C022A /* CFNetwork.framework */; };
@@ -64,12 +70,6 @@
 /* Begin PBXFileReference section */
 		150F1788DD504C9FBC4E804C /* libPods-Pan Africa Away Day.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pan Africa Away Day.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1742C2E308974284B044FE92 /* Pods-Pan Africa Away DayTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pan Africa Away DayTests.xcconfig"; path = "Pods/Pods-Pan Africa Away DayTests.xcconfig"; sourceTree = "<group>"; };
-		3604444618A2E40000EA9D29 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
-		3604444718A2E40000EA9D29 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
-		3604444A18A2E40000EA9D29 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
-		3604444B18A2E40000EA9D29 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
-		3604444E18A2E40000EA9D29 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
-		3604444F18A2E40000EA9D29 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
 		360A61A5188AD37100951FA7 /* MSEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSEventCell.m; sourceTree = "<group>"; };
 		360A61A6188AD37100951FA7 /* MSEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSEventCell.h; sourceTree = "<group>"; };
 		360A61A7188AD37100951FA7 /* MSDayColumnHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDayColumnHeader.m; sourceTree = "<group>"; };
@@ -108,12 +108,24 @@
 		36811FDB189D22AC0062E12B /* TWHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWHomeViewController.xib; sourceTree = "<group>"; };
 		36811FDE189D25190062E12B /* TWSessionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWSessionsView.xib; sourceTree = "<group>"; };
 		36811FE0189D2BDA0062E12B /* TWSpeakersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWSpeakersView.xib; sourceTree = "<group>"; };
+		36D61AF418B0385900E7D923 /* TWHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWHTTPClient.h; sourceTree = "<group>"; };
+		36D61AF518B0385900E7D923 /* TWHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWHTTPClient.m; sourceTree = "<group>"; };
+		36D61AF618B0385900E7D923 /* TWRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRecord.h; sourceTree = "<group>"; };
+		36D61AF718B0385900E7D923 /* TWRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRecord.m; sourceTree = "<group>"; };
+		36D61AF818B0385900E7D923 /* TWServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWServer.h; sourceTree = "<group>"; };
+		36D61AF918B0385900E7D923 /* TWServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWServer.m; sourceTree = "<group>"; };
 		36E9461E187580090003D526 /* TWSessionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSessionsViewController.h; sourceTree = "<group>"; };
 		36E9461F187580090003D526 /* TWSessionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSessionsViewController.m; sourceTree = "<group>"; };
 		36E94621187580200003D526 /* TWSpeakersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSpeakersViewController.h; sourceTree = "<group>"; };
 		36E94622187580200003D526 /* TWSpeakersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSpeakersViewController.m; sourceTree = "<group>"; };
 		36E94624187580330003D526 /* TWInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWInformationViewController.h; sourceTree = "<group>"; };
 		36E94625187580330003D526 /* TWInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWInformationViewController.m; sourceTree = "<group>"; };
+		36EE829118AE97D7001F4512 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		36EE829218AE97D7001F4512 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		36EE829518AE97D8001F4512 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		36EE829618AE97D8001F4512 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		36EE829918AE97D8001F4512 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
+		36EE829A18AE97D8001F4512 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
 		36F873D31876B3EC006C022A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		36F873D51876B3F3006C022A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		36F873D71876B40E006C022A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -203,21 +215,14 @@
 		360A618F188973AF00951FA7 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				3604444E18A2E40000EA9D29 /* Room.h */,
-				3604444F18A2E40000EA9D29 /* Room.m */,
-				3604444A18A2E40000EA9D29 /* Speaker.h */,
-				3604444B18A2E40000EA9D29 /* Speaker.m */,
-				3604444618A2E40000EA9D29 /* Session.h */,
-				3604444718A2E40000EA9D29 /* Session.m */,
+				36EE829918AE97D8001F4512 /* Speaker.h */,
+				36EE829A18AE97D8001F4512 /* Speaker.m */,
+				36EE829518AE97D8001F4512 /* Session.h */,
+				36EE829618AE97D8001F4512 /* Session.m */,
+				36EE829118AE97D7001F4512 /* Room.h */,
+				36EE829218AE97D7001F4512 /* Room.m */,
 			);
 			name = models;
-			sourceTree = "<group>";
-		};
-		360A619F188A3D5D00951FA7 /* services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = services;
 			sourceTree = "<group>";
 		};
 		362C49451875437F00950782 = {
@@ -308,7 +313,7 @@
 		362C49CD18756A6600950782 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				360A619F188A3D5D00951FA7 /* services */,
+				36D61AF318B035E900E7D923 /* networking */,
 				360A618F188973AF00951FA7 /* models */,
 				360A618E188972B800951FA7 /* controllers */,
 				362C49621875438000950782 /* TWAppDelegate.h */,
@@ -324,6 +329,19 @@
 				36FE40E718A2831300DA19FA /* TWHomeViewControllerSpec.m */,
 			);
 			name = specs;
+			sourceTree = "<group>";
+		};
+		36D61AF318B035E900E7D923 /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				36D61AF418B0385900E7D923 /* TWHTTPClient.h */,
+				36D61AF518B0385900E7D923 /* TWHTTPClient.m */,
+				36D61AF618B0385900E7D923 /* TWRecord.h */,
+				36D61AF718B0385900E7D923 /* TWRecord.m */,
+				36D61AF818B0385900E7D923 /* TWServer.h */,
+				36D61AF918B0385900E7D923 /* TWServer.m */,
+			);
+			name = networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,23 +514,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				362C49601875438000950782 /* main.m in Sources */,
+				36D61AFE18B0385900E7D923 /* TWServer.m in Sources */,
 				362C49641875438000950782 /* TWAppDelegate.m in Sources */,
 				362C49671875438000950782 /* Pan_Africa_Away_Day.xcdatamodeld in Sources */,
+				36EE829718AE97D8001F4512 /* Session.m in Sources */,
 				360A61D6188AE94600951FA7 /* MSCurrentTimeGridline.m in Sources */,
 				360A61AB188AD37100951FA7 /* MSDayColumnHeader.m in Sources */,
 				360A61D4188AE94600951FA7 /* MSDayColumnHeaderBackground.m in Sources */,
 				360A61D9188AE9EB00951FA7 /* MSTimeRowHeader.m in Sources */,
 				360A61AA188AD37100951FA7 /* MSEventCell.m in Sources */,
-				3604444818A2E40000EA9D29 /* Session.m in Sources */,
 				36811FDC189D22AC0062E12B /* TWHomeViewController.m in Sources */,
 				36E94626187580330003D526 /* TWInformationViewController.m in Sources */,
+				36D61AFC18B0385900E7D923 /* TWRecord.m in Sources */,
 				36E94620187580090003D526 /* TWSessionsViewController.m in Sources */,
-				3604445018A2E40000EA9D29 /* Room.m in Sources */,
 				360A61DF188AEA4300951FA7 /* MSTimeRowHeaderBackground.m in Sources */,
 				36E94623187580200003D526 /* TWSpeakersViewController.m in Sources */,
 				360A61D3188AE94600951FA7 /* MSGridline.m in Sources */,
+				36EE829318AE97D7001F4512 /* Room.m in Sources */,
 				360A61DC188AEA3200951FA7 /* MSCurrentTimeIndicator.m in Sources */,
-				3604444C18A2E40000EA9D29 /* Speaker.m in Sources */,
+				36EE829B18AE97D8001F4512 /* Speaker.m in Sources */,
+				36D61AFA18B0385900E7D923 /* TWHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,10 +541,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3604444918A2E40000EA9D29 /* Session.m in Sources */,
+				36D61AFB18B0385900E7D923 /* TWHTTPClient.m in Sources */,
+				36D61AFF18B0385900E7D923 /* TWServer.m in Sources */,
+				36EE829418AE97D7001F4512 /* Room.m in Sources */,
 				36FE40E818A2831300DA19FA /* TWHomeViewControllerSpec.m in Sources */,
-				3604445118A2E40000EA9D29 /* Room.m in Sources */,
-				3604444D18A2E40000EA9D29 /* Speaker.m in Sources */,
+				36EE829818AE97D8001F4512 /* Session.m in Sources */,
+				36EE829C18AE97D8001F4512 /* Speaker.m in Sources */,
+				36D61AFD18B0385900E7D923 /* TWRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
