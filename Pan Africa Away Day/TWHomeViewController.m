@@ -37,22 +37,38 @@
 
     self.managedObjectContext = appDelegate.managedObjectContext;
 
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Session"];
+    self.keyNoteFetchedResultsController =[self setupKeynoteFetchResultsController:self.keyNoteFetchedResultsController keynotePredicate:[NSPredicate predicateWithFormat:@"isKeynote == 1",[NSNumber numberWithBool:YES]]];
+    
+    self.talkFetchedResultsController =[self setupKeynoteFetchResultsController:self.talkFetchedResultsController keynotePredicate:[NSPredicate predicateWithFormat:@"isKeynote == 0",[NSNumber numberWithBool:NO]]];
 
-    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"startTime" ascending:YES]];
-
-    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-
-    self.fetchedResultsController.delegate = self;
-
-    [self.fetchedResultsController performFetch:nil];
-
+    self.currentFetchedResultsController = self.keyNoteFetchedResultsController;
+    
+    self.currentFetchedResultsController.delegate = self;
+    
     tableView.separatorInset = UIEdgeInsetsZero;
 
     [navigationBar setShadowImage:[[UIImage alloc] init]];
 
     [navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    
+    
 
+}
+
+- (NSFetchedResultsController* )setupKeynoteFetchResultsController:(NSFetchedResultsController *)controller keynotePredicate:(NSPredicate *)keynotePredicate {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Session"];
+    [fetchRequest setPredicate: keynotePredicate];
+
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"startTime" ascending:YES]];
+
+    controller = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+
+    controller.delegate = self;
+
+    [controller performFetch:nil];
+    
+     NSLog(@"-->%d",controller.fetchedObjects.count);
+    return controller;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,12 +77,12 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.fetchedResultsController.sections.count;
+    return self.currentFetchedResultsController.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    return self.fetchedResultsController.fetchedObjects.count;
+    return self.currentFetchedResultsController.fetchedObjects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)givenTableView
@@ -80,7 +96,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    Session *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Session *event = [self.currentFetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = event.title;
 
 
@@ -95,14 +111,14 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90;
+    return 75;
 }
 
 - (IBAction)syncSessionsAndSpeakers:(id)sender {
 
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Updating Schedule";
-    
+
     [Session getSessions:self.managedObjectContext domain:self resultBlock:^(NSArray *data, MMServerPageManager *pageManager, BOOL *req) {
         NSLog(@" sessions working");
         NSLog(@" f--> %d", [data count]);
@@ -110,24 +126,36 @@
     }       failureBlock:^(NSError *error) {
         NSLog(@" sessions failed");
     }];
-    
+
     [Speaker getSpeakers:self.managedObjectContext domain:self resultBlock:^(NSArray *data, MMServerPageManager *pageManager, BOOL *req) {
         NSLog(@" speakers working");
         NSLog(@" f--> %d", [data count]);
-        
+
     }       failureBlock:^(NSError *error) {
         NSLog(@" speakers failed");
     }];
-    
+
     [self.tableView reloadData];
 }
 
 
 - (IBAction)segmentControlValueChanged:(id)sender {
+    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
+    NSLog(@"control %ld", (long) [segmentedControl selectedSegmentIndex]);
+
+    if ([sender selectedSegmentIndex] == 0) {
+        self.currentFetchedResultsController = self.keyNoteFetchedResultsController;
+        NSLog(@"-->%d",self.keyNoteFetchedResultsController.fetchedObjects.count);
+        [self.tableView reloadData];
+    }
+    else if ([sender selectedSegmentIndex] == 1) {
+        self.currentFetchedResultsController = self.talkFetchedResultsController;
+        NSLog(@"-->%d",self.talkFetchedResultsController.fetchedObjects.count);
+        [self.tableView reloadData];
+    }
+
+
 }
-
- 
-
 
 
 @end

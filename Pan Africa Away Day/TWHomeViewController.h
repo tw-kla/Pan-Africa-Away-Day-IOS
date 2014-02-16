@@ -10,7 +10,9 @@
 
 @interface TWHomeViewController : UIViewController <NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong,nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong,nonatomic) NSFetchedResultsController *keyNoteFetchedResultsController;
+@property (strong,nonatomic) NSFetchedResultsController *talkFetchedResultsController;
+@property (strong,nonatomic) NSFetchedResultsController *currentFetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *syncButton;

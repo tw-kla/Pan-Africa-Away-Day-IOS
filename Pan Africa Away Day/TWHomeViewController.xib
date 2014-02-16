@@ -18,22 +18,22 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImage" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-KP-sL7">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mainImage" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-KP-sL7">
                     <rect key="frame" x="0.0" y="21" width="320" height="240"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oho-kO-ao2">
-                    <rect key="frame" x="99" y="261" width="123" height="29"/>
+                    <rect key="frame" x="0.0" y="261" width="321" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <segments>
                         <segment title="Keynotes"/>
-                        <segment title="Talks"/>
+                        <segment title="Sessions"/>
                     </segments>
                     <connections>
                         <action selector="segmentControlValueChanged:" destination="-1" eventType="valueChanged" id="bhU-Ud-4oe"/>
                     </connections>
                 </segmentedControl>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-dg-Cpy">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-dg-Cpy">
                     <rect key="frame" x="0.0" y="291" width="320" height="277"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,8 +65,10 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="hFc-dg-Cpy" secondAttribute="bottom" id="5xa-tJ-cyg"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="top" secondItem="oho-kO-ao2" secondAttribute="bottom" constant="2" id="AYj-on-cLx"/>
+                <constraint firstItem="oho-kO-ao2" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Dgf-Dr-Omf"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Frt-J9-uoA"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="trailing" secondItem="jHq-KP-sL7" secondAttribute="trailing" id="GGG-k3-R57"/>
+                <constraint firstAttribute="trailing" secondItem="oho-kO-ao2" secondAttribute="trailing" id="SbF-Hv-OUV"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="leading" secondItem="jHq-KP-sL7" secondAttribute="leading" id="e1Y-YT-Dc1"/>
                 <constraint firstItem="oho-kO-ao2" firstAttribute="top" secondItem="jHq-KP-sL7" secondAttribute="bottom" id="goi-dk-LbF"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="centerX" secondItem="oho-kO-ao2" secondAttribute="centerX" id="nOg-HI-Mo2"/>
