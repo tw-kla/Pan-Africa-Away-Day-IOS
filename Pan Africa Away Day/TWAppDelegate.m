@@ -39,15 +39,14 @@
 
 
     [Session getSessions:self.managedObjectContext domain:self resultBlock:^(NSArray *data, MMServerPageManager *pageManager, BOOL *req) {
-        NSLog(@" sessions working");
-        NSLog(@" f--> %d", [data count]);
+ 
     }       failureBlock:^(NSError *error) {
         NSLog(@" sessions failed");
     }];
 
     [Speaker getSpeakers:self.managedObjectContext domain:self resultBlock:^(NSArray *data, MMServerPageManager *pageManager, BOOL *req) {
-        NSLog(@" speakers working");
-        NSLog(@" f--> %d", [data count]);
+       
+       
     }       failureBlock:^(NSError *error) {
         NSLog(@" speakers failed");
     }];
@@ -66,15 +65,15 @@
 
 #pragma mark - controller setup
 
-    TWHomeViewController *homeNav = [[TWHomeViewController alloc] initWithNibName:@"TWHomeViewController" bundle:nil];
-
+     TWHomeViewController *homeNav = [[TWHomeViewController alloc] initWithNibName:@"TWHomeViewController" bundle:nil];
+    UINavigationController *homeNavController = [[UINavigationController alloc] initWithRootViewController:homeNav];
 
     UINavigationController *sessionsNav = [self wrapViewControllerInNavigationController:[[TWSessionsViewController alloc] initWithNibName:@"TWSessionsView" bundle:nil] withColors:colors];
 
     UINavigationController *speakersNav = [self wrapViewControllerInNavigationController:[[TWSpeakersViewController alloc] initWithNibName:@"TWSpeakersView" bundle:nil] withColors:colors];
 
 
-    self.tabBarController.viewControllers = @[homeNav, sessionsNav, speakersNav];
+    self.tabBarController.viewControllers = @[homeNavController, sessionsNav, speakersNav];
 
     self.window.rootViewController = self.tabBarController;
 

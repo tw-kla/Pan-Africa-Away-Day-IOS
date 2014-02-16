@@ -11,6 +11,7 @@
 #import "Session.h"
 #import "Speaker.h"
 #import "UIImageView+AFNetworking.h"
+#import "TWSessionDetailViewController.h"
 
 
 @interface TWHomeViewController ()
@@ -24,12 +25,32 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 
-        self.title = @"Featured";
+        self.title = @"Home";
         [self.tabBarItem setImage:[UIImage imageNamed:@"IconHome"]];
     }
     return self;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    
+    TWSessionDetailViewController *detailViewController = [[TWSessionDetailViewController alloc] initWithNibName:@"TWSessionDetailViewController" bundle:nil];
+     Session *session = [self.currentFetchedResultsController objectAtIndexPath:indexPath];
+    detailViewController.session = session;
+	[self.navigationController pushViewController:detailViewController animated:YES];
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -120,16 +141,14 @@
     hud.labelText = @"Updating Schedule";
 
     [Session getSessions:self.managedObjectContext domain:self resultBlock:^(NSArray *data, MMServerPageManager *pageManager, BOOL *req) {
-        NSLog(@" sessions working");
-        NSLog(@" f--> %d", [data count]);
+       
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }       failureBlock:^(NSError *error) {
         NSLog(@" sessions failed");
     }];
 
     [Speaker getSpeakers:self.managedObjectContext domain:self resultBlock:^(NSArray *data, MMServerPageManager *pageManager, BOOL *req) {
-        NSLog(@" speakers working");
-        NSLog(@" f--> %d", [data count]);
+    
 
     }       failureBlock:^(NSError *error) {
         NSLog(@" speakers failed");

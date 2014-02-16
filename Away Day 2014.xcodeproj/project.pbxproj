@@ -39,6 +39,11 @@
 		36D61AFD18B0385900E7D923 /* TWRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61AF718B0385900E7D923 /* TWRecord.m */; };
 		36D61AFE18B0385900E7D923 /* TWServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61AF918B0385900E7D923 /* TWServer.m */; };
 		36D61AFF18B0385900E7D923 /* TWServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61AF918B0385900E7D923 /* TWServer.m */; };
+		36D61B0318B056E600E7D923 /* TWSessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61B0118B056E600E7D923 /* TWSessionDetailViewController.m */; };
+		36D61B0418B056E600E7D923 /* TWSessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61B0118B056E600E7D923 /* TWSessionDetailViewController.m */; };
+		36D61B0518B056E600E7D923 /* TWSessionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D61B0218B056E600E7D923 /* TWSessionDetailViewController.xib */; };
+		36D61B0618B056E600E7D923 /* TWSessionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D61B0218B056E600E7D923 /* TWSessionDetailViewController.xib */; };
+		36D61B0818B0AB9F00E7D923 /* TWSessionDetailViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D61B0718B0AB9F00E7D923 /* TWSessionDetailViewControllerTest.m */; };
 		36E94620187580090003D526 /* TWSessionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E9461F187580090003D526 /* TWSessionsViewController.m */; };
 		36E94623187580200003D526 /* TWSpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94622187580200003D526 /* TWSpeakersViewController.m */; };
 		36E94626187580330003D526 /* TWInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E94625187580330003D526 /* TWInformationViewController.m */; };
@@ -114,6 +119,10 @@
 		36D61AF718B0385900E7D923 /* TWRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRecord.m; sourceTree = "<group>"; };
 		36D61AF818B0385900E7D923 /* TWServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWServer.h; sourceTree = "<group>"; };
 		36D61AF918B0385900E7D923 /* TWServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWServer.m; sourceTree = "<group>"; };
+		36D61B0018B056E600E7D923 /* TWSessionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSessionDetailViewController.h; sourceTree = "<group>"; };
+		36D61B0118B056E600E7D923 /* TWSessionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSessionDetailViewController.m; sourceTree = "<group>"; };
+		36D61B0218B056E600E7D923 /* TWSessionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TWSessionDetailViewController.xib; sourceTree = "<group>"; };
+		36D61B0718B0AB9F00E7D923 /* TWSessionDetailViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSessionDetailViewControllerTest.m; sourceTree = "<group>"; };
 		36E9461E187580090003D526 /* TWSessionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSessionsViewController.h; sourceTree = "<group>"; };
 		36E9461F187580090003D526 /* TWSessionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSessionsViewController.m; sourceTree = "<group>"; };
 		36E94621187580200003D526 /* TWSpeakersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSpeakersViewController.h; sourceTree = "<group>"; };
@@ -208,6 +217,9 @@
 				36811FDB189D22AC0062E12B /* TWHomeViewController.xib */,
 				36811FDE189D25190062E12B /* TWSessionsView.xib */,
 				36811FE0189D2BDA0062E12B /* TWSpeakersView.xib */,
+				36D61B0018B056E600E7D923 /* TWSessionDetailViewController.h */,
+				36D61B0118B056E600E7D923 /* TWSessionDetailViewController.m */,
+				36D61B0218B056E600E7D923 /* TWSessionDetailViewController.xib */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -327,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				36FE40E718A2831300DA19FA /* TWHomeViewControllerSpec.m */,
+				36D61B0718B0AB9F00E7D923 /* TWSessionDetailViewControllerTest.m */,
 			);
 			name = specs;
 			sourceTree = "<group>";
@@ -432,6 +445,7 @@
 				36811FE1189D2BDA0062E12B /* TWSpeakersView.xib in Resources */,
 				362C49691875438000950782 /* Images.xcassets in Resources */,
 				36811FDD189D22AC0062E12B /* TWHomeViewController.xib in Resources */,
+				36D61B0518B056E600E7D923 /* TWSessionDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				362C497B1875438000950782 /* InfoPlist.strings in Resources */,
+				36D61B0618B056E600E7D923 /* TWSessionDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +531,7 @@
 				362C49601875438000950782 /* main.m in Sources */,
 				36D61AFE18B0385900E7D923 /* TWServer.m in Sources */,
 				362C49641875438000950782 /* TWAppDelegate.m in Sources */,
+				36D61B0318B056E600E7D923 /* TWSessionDetailViewController.m in Sources */,
 				362C49671875438000950782 /* Pan_Africa_Away_Day.xcdatamodeld in Sources */,
 				36EE829718AE97D8001F4512 /* Session.m in Sources */,
 				360A61D6188AE94600951FA7 /* MSCurrentTimeGridline.m in Sources */,
@@ -542,8 +558,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D61AFB18B0385900E7D923 /* TWHTTPClient.m in Sources */,
+				36D61B0818B0AB9F00E7D923 /* TWSessionDetailViewControllerTest.m in Sources */,
 				36D61AFF18B0385900E7D923 /* TWServer.m in Sources */,
 				36EE829418AE97D7001F4512 /* Room.m in Sources */,
+				36D61B0418B056E600E7D923 /* TWSessionDetailViewController.m in Sources */,
 				36FE40E818A2831300DA19FA /* TWHomeViewControllerSpec.m in Sources */,
 				36EE829818AE97D8001F4512 /* Session.m in Sources */,
 				36EE829C18AE97D8001F4512 /* Speaker.m in Sources */,

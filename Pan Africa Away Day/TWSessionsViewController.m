@@ -17,6 +17,7 @@
 #import "MSGridline.h"
 #import "MSTimeRowHeaderBackground.h"
 #import "MSDayColumnHeaderBackground.h"
+#import "TWSessionDetailViewController.h"
 
 
 NSString * const MSEventCellReuseIdentifier = @"MSEventCellReuseIdentifier";
@@ -179,6 +180,16 @@ static const int kBatchSize = 40;
     return [NSDate date];
 }
 
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+   
+    
+    TWSessionDetailViewController *detailViewController = [[TWSessionDetailViewController alloc] initWithNibName:@"TWSessionDetailViewController" bundle:nil];
+    Session *session = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    detailViewController.session = session;
+	[self.navigationController pushViewController:detailViewController animated:YES];
+
+}
 
 
 
