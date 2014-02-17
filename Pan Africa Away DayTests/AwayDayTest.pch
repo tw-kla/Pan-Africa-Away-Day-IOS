@@ -1,0 +1,29 @@
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+#import <XCTest/XCTest.h>
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
+#import <OCMock/OCMock.h>
+
+#define MAS_SHORTHAND
+// Pods
+
+#import <CupertinoYankee/NSDate+CupertinoYankee.h>
+#import <UIColor-Utilities/UIColor+Expanded.h>
+#import <Masonry/Masonry.h>
+#import "MBProgressHUD.h"
+#import "AFNetworking.h"
+#endif
+
+

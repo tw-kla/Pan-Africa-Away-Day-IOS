@@ -21,10 +21,18 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainImage" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-KP-sL7">
                     <rect key="frame" x="0.0" y="21" width="321" height="240"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="NwV-R7-phr"/>
+                        <constraint firstAttribute="width" constant="321" id="t1g-C3-Ih2"/>
+                    </constraints>
                 </imageView>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oho-kO-ao2">
-                    <rect key="frame" x="0.0" y="261" width="321" height="29"/>
+                    <rect key="frame" x="0.0" y="262" width="321" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="321" id="NQX-CH-kvI"/>
+                        <constraint firstAttribute="height" constant="27" id="Xsu-je-bdB"/>
+                    </constraints>
                     <segments>
                         <segment title="Keynotes"/>
                         <segment title="Sessions"/>
@@ -34,12 +42,9 @@
                     </connections>
                 </segmentedControl>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-dg-Cpy">
-                    <rect key="frame" x="0.0" y="291" width="321" height="277"/>
+                    <rect key="frame" x="0.0" y="291" width="321" height="227"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="277" id="qpw-SG-FDq"/>
-                    </constraints>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="NFD-QS-u1o"/>
@@ -63,14 +68,15 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="hFc-dg-Cpy" secondAttribute="bottom" id="5xa-tJ-cyg"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="top" secondItem="oho-kO-ao2" secondAttribute="bottom" constant="2" id="AYj-on-cLx"/>
+                <constraint firstAttribute="bottom" secondItem="hFc-dg-Cpy" secondAttribute="bottom" constant="50" id="BWj-ec-9xq"/>
                 <constraint firstItem="oho-kO-ao2" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Dgf-Dr-Omf"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Frt-J9-uoA"/>
+                <constraint firstItem="jHq-KP-sL7" firstAttribute="top" secondItem="1" secondAttribute="top" constant="21" id="G2c-pY-gcJ"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="trailing" secondItem="jHq-KP-sL7" secondAttribute="trailing" id="GGG-k3-R57"/>
                 <constraint firstAttribute="trailing" secondItem="oho-kO-ao2" secondAttribute="trailing" constant="-1" id="SbF-Hv-OUV"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="leading" secondItem="jHq-KP-sL7" secondAttribute="leading" id="e1Y-YT-Dc1"/>
-                <constraint firstItem="oho-kO-ao2" firstAttribute="top" secondItem="jHq-KP-sL7" secondAttribute="bottom" id="goi-dk-LbF"/>
+                <constraint firstItem="oho-kO-ao2" firstAttribute="top" secondItem="jHq-KP-sL7" secondAttribute="bottom" constant="1" id="goi-dk-LbF"/>
                 <constraint firstItem="hFc-dg-Cpy" firstAttribute="centerX" secondItem="oho-kO-ao2" secondAttribute="centerX" id="nOg-HI-Mo2"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

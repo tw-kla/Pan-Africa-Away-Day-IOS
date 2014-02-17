@@ -6,11 +6,8 @@
 //  Copyright (c) 2014 Thoughtworks. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+
 #import "TWHomeViewController.h"
-#define HC_SHORTHAND
-#import <OCHamcrest/OCHamcrest.h>
-#import <OCMock/OCMock.h>
 #import "TWAppDelegate.h"
 
 @interface TWHomeViewControllerSpec : XCTestCase
@@ -25,7 +22,7 @@
     sut = [[TWHomeViewController alloc]init];
     TWAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     sut.managedObjectContext = appDelegate.managedObjectContext;
-  
+    
     [sut view];
     
 }
@@ -45,19 +42,19 @@
 
 - (void)testSyncBarButtonShouldBeConnected
 {
-   
+    
     assertThat(sut.syncButton, is(notNilValue()));
 }
 
 - (void)testSyncButtonAction
 {
- 
+    
     assertThat(NSStringFromSelector ([sut.syncButton action]),equalTo(@"syncSessionsAndSpeakers:"));
 }
 
 - (void)testSegementControlShouldBeConnected
 {
-   
+    
     assertThat(sut.sessionTypeSegementControl, is(notNilValue()));
 }
 

@@ -6,11 +6,8 @@
 //  Copyright (c) 2014 Thoughtworks. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import "TWSessionDetailViewController.h"
-#define HC_SHORTHAND
-#import <OCHamcrest/OCHamcrest.h>
-#import <OCMock/OCMock.h>
+
 #import "TWAppDelegate.h"
 #import "Session.h"
 
